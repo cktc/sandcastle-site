@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Check your rate | Fernbank</title>
+  <meta name="description" content="Tell us the amount and term, answer four quick questions and request a call. Every application is assessed.">
+  <link rel="canonical" href="https://example.github.io/REPO/apply.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Fernbank">
+  <meta property="og:title" content="Check your rate | Fernbank">
+  <meta property="og:description" content="Tell us the amount and term, answer four quick questions and request a call. Every application is assessed.">
+  <meta property="og:url" content="https://example.github.io/REPO/apply.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://connect.facebook.net https://*.googletagmanager.com https://www.googleadservices.com; connect-src 'self' https://www.facebook.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://www.google.com https://*.g.doubleclick.net https://www.googleadservices.com https://formspree.io; img-src 'self' data: https://www.facebook.com https://*.google-analytics.com https://*.googletagmanager.com https://www.google.com https://*.g.doubleclick.net https://www.googleadservices.com; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; base-uri 'self'; form-action 'self' https://formspree.io">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230E5A63'/%3E%3C/svg%3E">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="wordmark" href="index.html" data-testid="wordmark"><svg class="wordmark__mark" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="6"/><g fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20l7-5 7 5" opacity=".35"/><path d="M7 15l7-5 7 5" opacity=".6"/><path d="M7 10l7-5 7 5"/></g></svg><span data-cfg="BRAND_NAME">Fernbank</span></a>
+    <nav id="site-nav" class="site-nav" aria-label="Main"><ul>
+      <li><a href="how-it-works.html">How it works</a></li>
+      <li><a href="rates.html">Rates and fees</a></li>
+      <li><a href="eligibility.html">Who can apply</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="hardship.html">Help</a></li>
+    </ul></nav>
+    <div class="header-actions">
+      <a class="btn btn--primary btn--sm" href="apply.html" data-cta="header-check-rate" data-testid="cta-header">Check your rate</a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu" data-testid="nav-toggle"><span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span></button>
+    </div>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+<section class="page-head"><div class="container container--reading">
+  <h1>Check your rate</h1>
+  <p class="lede">Four short steps. You see an estimate first. Nothing is sent until the last step.</p>
+  <p class="muted" data-testid="eligibility-statement">You must be 18 or over and an Australian resident. Terms, fees and lending criteria apply. Approval is not guaranteed.</p>
+</div></section>
+<section class="section section--flush"><div class="container container--reading">
+<noscript><div class="alert alert--warning"><p>This form needs JavaScript to send your request. Call 1300 000 000 and we will take it by phone.</p></div></noscript>
+<!-- Placeholder action so a no-JS native post has a target. Must match FORM_ENDPOINT in assets/js/config.js. -->
+<form class="apply-card card" data-apply data-track action="https://formspree.io/f/PLACEHOLDER" method="post" novalidate data-testid="apply-form">
+  <input type="hidden" name="_subject" value="New loan request">
+  <div class="alert alert--error" data-errors role="alert" aria-live="assertive" tabindex="-1" hidden data-testid="apply-errors"></div>
+  <div class="progress-wrap">
+    <ol class="progress"><li class="progress__step"><span class="visually-hidden">Loan details</span></li><li class="progress__step"><span class="visually-hidden">Eligibility</span></li><li class="progress__step"><span class="visually-hidden">Consent</span></li><li class="progress__step"><span class="visually-hidden">Contact</span></li></ol>
+    <p class="progress__text" data-progress aria-live="polite" data-testid="apply-progress">Step 1 of 4</p>
+  </div>
+
+  <fieldset data-step data-testid="apply-step-1">
+    <h2 data-step-heading tabindex="-1">Loan details</h2>
+    <div class="field">
+      <label for="loan_amount">How much do you want to borrow? (dollars)</label>
+      <div class="amount-row">
+        <input type="number" id="loan_amount" name="loan_amount" inputmode="numeric" min="2001" max="5000" step="1" value="3100" required data-label="an amount" aria-describedby="amount-hint err-loan_amount" data-testid="field-loan-amount">
+        <input type="range" data-amount-slider min="2100" max="5000" step="100" value="3100" aria-label="Loan amount slider" aria-describedby="amount-hint" data-testid="field-amount-slider">
+      </div>
+      <span class="hint" id="amount-hint">Between $2,001 and $5,000, in steps of $100.</span>
+      <span class="field-error" id="err-loan_amount" data-error-for="loan_amount"></span>
+    </div>
+    <fieldset class="field" aria-describedby="term-hint err-term_months">
+      <legend class="label">How long do you want to repay over?</legend>
+      <div class="radio-grid"><label class="radio-card"><input type="radio" class="visually-hidden" name="term_months" value="3" required data-error="Choose a term between 3 and 12 months." data-testid="term-3"><span class="radio-card__body"><span class="radio-card__title">3 months</span><span class="radio-card__line" data-term-monthly>-</span><span class="radio-card__line" data-term-total>-</span></span></label><label class="radio-card"><input type="radio" class="visually-hidden" name="term_months" value="6" required checked data-testid="term-6"><span class="radio-card__body"><span class="radio-card__title">6 months</span><span class="radio-card__line" data-term-monthly>-</span><span class="radio-card__line" data-term-total>-</span></span></label><label class="radio-card"><input type="radio" class="visually-hidden" name="term_months" value="9" required data-testid="term-9"><span class="radio-card__body"><span class="radio-card__title">9 months</span><span class="radio-card__line" data-term-monthly>-</span><span class="radio-card__line" data-term-total>-</span></span></label><label class="radio-card"><input type="radio" class="visually-hidden" name="term_months" value="12" required data-testid="term-12"><span class="radio-card__body"><span class="radio-card__title">12 months</span><span class="radio-card__line" data-term-monthly>-</span><span class="radio-card__line" data-term-total>-</span></span></label></div>
+      <span class="hint" id="term-hint">3 to 12 months. Longer means smaller repayments and more interest.</span>
+      <span class="field-error" id="err-term_months" data-error-for="term_months"></span>
+    </fieldset>
+    <div class="field">
+      <label for="purpose">What is the loan for? (optional)</label>
+      <select id="purpose" name="purpose" data-testid="field-purpose">
+        <option value="">Choose one</option><option value="car">Car repairs or rego</option><option value="dental">Dental or medical</option>
+        <option value="bond">Rental bond or moving</option><option value="other">Something else</option>
+      </select>
+    </div>
+    <div class="estimate cost-strip" data-testid="estimate">
+      <h3>Your estimate</h3>
+      <dl class="ledger" data-testid="estimate-ledger">
+  <div class="ledger__row"><dt>Establishment fee</dt><dd><span data-est="fee">-</span></dd></div>
+  <div class="ledger__row"><dt>Each month</dt><dd><span data-est="monthly">-</span></dd></div>
+  <div class="ledger__row"><dt>Interest rate used</dt><dd><span data-est="rate"><span data-cfg="RATE_REP">36.00%</span></span> p.a.</dd></div>
+  <div class="ledger__row"><dt>Comparison rate</dt><dd><span data-est="comparison">-</span> p.a.* <span class="placeholder-note" data-testid="placeholder-note">Illustrative only. Rates and fees are placeholders pending pricing and legal review.</span></dd></div>
+</dl>
+      <p class="warn-text" data-testid="comparison-rate-warning">WARNING: This comparison rate is true only for the example given and may not include all fees and charges. Different terms, fees or other loan amounts might result in a different comparison rate.</p>
+      <div aria-live="polite"><dl class="ledger">
+  
+</dl>
+<dl class="ledger" data-testid="total-repay">
+  <div class="ledger__row ledger__row--total"><dt>Total you would repay</dt><dd><span data-est="total">-</span></dd></div>
+</dl></div>
+      <p class="cost-strip__foot">Estimate only. Your rate depends on your assessment.</p>
+    </div>
+    <p class="legal legal--gap" data-testid="apply-disclosures"><span data-cfg="BRAND_NAME">Fernbank</span> is a loan from <span data-cfg="LEGAL_ENTITY">Mantis Pty Ltd (placeholder)</span>, Australian credit licence <span data-cfg="ACL_NUMBER">000000</span>. Every application is assessed. We check your income, expenses and bank data to confirm you can repay without hardship. Approval is not guaranteed. Ask us for a copy of our <a href="credit-guide.html" target="_blank" rel="noopener">credit guide (opens in a new tab)</a>. This product is designed for [target market]: <a href="tmd.html" target="_blank" rel="noopener">read the target market determination (opens in a new tab)</a>. <!-- [PLACEHOLDER: target market text from the final TMD] --></p>
+    <div class="form-nav"><button type="button" class="btn btn--primary" data-next data-testid="apply-next-1">Continue</button></div>
+  </fieldset>
+
+  <fieldset data-step data-gate="eligibility" data-testid="apply-step-2">
+    <h2 data-step-heading tabindex="-1">A few quick questions</h2>
+    <p class="hint hint--gap">Tick each one that is true.</p>
+    <div class="check"><input type="checkbox" id="elig_age" name="elig_age" value="yes" data-fail-code="age" data-fail-reason="you need to be 18 or over"><label for="elig_age">I am 18 or over.</label></div>
+    <div class="check"><input type="checkbox" id="elig_resident" name="elig_resident" value="yes" data-fail-code="residency" data-fail-reason="you need to live in Australia and be able to work here"><label for="elig_resident">I live in Australia and can work here.</label></div>
+    <div class="check"><input type="checkbox" id="elig_income" name="elig_income" value="yes" data-fail-code="income" data-fail-reason="you need to get regular income from work"><label for="elig_income">I get regular income from work.</label></div>
+    <div class="check"><input type="checkbox" id="elig_bank" name="elig_bank" value="yes" data-fail-code="bank_account" data-fail-reason="you need an Australian bank account in your name"><label for="elig_bank">I have an Australian bank account in my name.</label></div>
+    <div class="form-nav"><button type="button" class="btn btn--secondary" data-back data-testid="apply-back-2">Back</button><button type="button" class="btn btn--primary" data-next data-testid="apply-next-2">Continue</button></div>
+  </fieldset>
+
+  <fieldset data-step data-on-next="consent_given" data-testid="apply-step-3">
+    <h2 data-step-heading tabindex="-1">Share your bank data, read-only</h2>
+    <div class="callout" data-testid="bank-consent-text"><p>We use <span data-cfg="PROVIDER">Basiq (placeholder)</span> to read your bank transactions, read-only, for 90 days. We use them to confirm your income and expenses and assess this application. We cannot move money. You can withdraw consent at any time. See our <a href="privacy.html">Privacy Policy</a>.</p></div>
+    <!-- [VERIFY: counsel] provider accreditation and wording -->
+    <div class="check check--gap"><input type="checkbox" id="consent_bank_data" name="consent_bank_data" value="yes" required data-label="the box" data-error="Tick the box to continue. We cannot assess your application without it." aria-describedby="err-consent_bank_data" data-testid="field-consent"><label for="consent_bank_data">I have read and agree to this, the Privacy Policy and the target market determination.</label></div>
+    <span class="field-error" id="err-consent_bank_data" data-error-for="consent_bank_data"></span>
+    <p class="legal">Read: <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy (opens in a new tab)</a>, <a href="credit-guide.html" target="_blank" rel="noopener">credit guide (opens in a new tab)</a>, <a href="tmd.html" target="_blank" rel="noopener">target market determination (opens in a new tab)</a>.</p>
+    <div class="form-nav"><button type="button" class="btn btn--secondary" data-back data-testid="apply-back-3">Back</button><button type="button" class="btn btn--primary" data-next data-testid="apply-next-3">Continue</button></div>
+  </fieldset>
+
+  <fieldset data-step data-one-of="email,mobile" data-one-of-error="Give an email or a mobile." data-testid="apply-step-4">
+    <h2 data-step-heading tabindex="-1">Where should we reach you?</h2>
+    <div class="field"><label for="full_name">Your name</label><input type="text" id="full_name" name="full_name" autocomplete="name" required data-label="your name" data-error="Enter your name." aria-describedby="err-full_name" data-testid="field-name"><span class="field-error" id="err-full_name" data-error-for="full_name"></span></div>
+    <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" autocomplete="email" inputmode="email" aria-describedby="contact-hint err-email" data-testid="field-email"><span class="field-error" id="err-email" data-error-for="email"></span></div>
+    <div class="field"><label for="mobile">Mobile</label><input type="tel" id="mobile" name="mobile" autocomplete="tel" inputmode="tel" aria-describedby="contact-hint err-mobile" data-testid="field-mobile"><span class="hint" id="contact-hint">Give one of these. Mobile example: 0412 345 678.</span><span class="field-error" id="err-mobile" data-error-for="mobile"></span></div>
+    <div class="field"><label for="preferred_time">Best time to call (optional)</label><input type="text" id="preferred_time" name="preferred_time" aria-describedby="time-hint" data-testid="field-time"><span class="hint" id="time-hint"><span data-cfg="HOURS">[Days and hours, e.g. Mon to Fri 9am to 5pm AEST]</span></span></div>
+    <div class="check"><input type="checkbox" id="contact_consent" name="contact_consent" value="yes" required data-label="the box" data-error="Tick the box so we can call you." aria-describedby="err-contact_consent" data-testid="field-contact-consent"><label for="contact_consent">I agree that <span data-cfg="BRAND_NAME">Fernbank</span> can contact me about this application.</label></div>
+    <span class="field-error" id="err-contact_consent" data-error-for="contact_consent"></span>
+    <div class="form-nav"><button type="button" class="btn btn--secondary" data-back data-testid="apply-back-4">Back</button><button type="submit" class="btn btn--primary" data-testid="apply-submit">Send my request</button></div>
+  </fieldset>
+
+  <div data-ineligible hidden tabindex="-1" data-testid="apply-ineligible">
+    <h2>We cannot go further today</h2>
+    <p>We cannot offer this loan right now. The reason: <span data-ineligible-reason></span>. This is not a judgement on you. We need all four to be true so we can check you can repay.</p>
+    <!-- [PLACEHOLDER: the reason text is read from data-fail-reason on each tick box in step 2] -->
+    <ul>
+      <li>If you ticked by mistake, go back and change your answers.</li>
+      <li>Read <a href="eligibility.html">who can apply</a>.</li>
+      <li>For free help with bills, call the National Debt Helpline on <span data-cfg="NDH_PHONE">1800 007 007</span>. <!-- [verify] --></li>
+    </ul>
+    <div class="cta-row"><button type="button" class="btn btn--secondary" data-ineligible-back data-testid="ineligible-back">Go back</button><a class="btn btn--primary" href="eligibility.html" data-testid="ineligible-read">Read who can apply</a></div>
+  </div>
+</form>
+</div></section>
+</main>
+<footer class="site-footer" data-testid="site-footer">
+  <div class="container footer__grid">
+    <div class="footer__links">
+      <nav aria-label="Footer"><ul>
+        <li><a href="rates.html">Rates and fees</a></li>
+        <li><a href="hardship.html">Hardship and complaints</a></li>
+        <li><a href="about.html">About and licence</a></li>
+        <li><a href="privacy.html">Privacy policy</a></li>
+        <li><a href="credit-guide.html">Credit guide</a></li>
+        <li><a href="tmd.html">Target market</a></li>
+        <li><button type="button" data-consent-open data-testid="cookie-settings">Cookie settings</button></li>
+      </ul></nav>
+    </div>
+    <div class="footer__legal">
+      <p data-testid="footer-licence"><strong><span data-cfg="LEGAL_ENTITY">Mantis Pty Ltd (placeholder)</span></strong>, Australian credit licence (ACL) <span data-cfg="ACL_NUMBER">000000</span>. ABN <span data-cfg="ABN">00 000 000 000</span>. <span data-cfg="BRAND_NAME">Fernbank</span> is a loan from <span data-cfg="LEGAL_ENTITY">Mantis Pty Ltd (placeholder)</span>.</p>
+      <address><span data-cfg="ADDRESS">[Street address, Suburb STATE 0000]</span><br>Phone <a href="tel:1300000000" data-cfg-href="tel:{PHONE_TEL}"><span data-cfg="PHONE">1300 000 000</span></a> (<span data-cfg="HOURS">[Days and hours, e.g. Mon to Fri 9am to 5pm AEST]</span>)<br>Email <a href="mailto:hello@example.com.au" data-cfg-href="mailto:{EMAIL}"><span data-cfg="EMAIL">hello@example.com.au</span></a></address>
+      <p data-testid="footer-assessment">Every application is assessed. We check your income, expenses and bank data to confirm you can repay without hardship. Approval is not guaranteed.</p>
+      <p data-testid="footer-hardship">If you are struggling to repay, tell us early. Call <span data-cfg="PHONE">1300 000 000</span>. We will talk through options. <a href="hardship.html">Hardship and complaints</a></p>
+      <p data-testid="footer-warning">WARNING: This comparison rate is true only for the example given and may not include all fees and charges. Different terms, fees or other loan amounts might result in a different comparison rate.</p>
+      <p data-testid="footer-afca">Complaints: contact us first. If we do not fix it, you can go to the Australian Financial Complaints Authority (AFCA), membership number <span data-cfg="AFCA_MEMBER_NO">000000</span>. Phone <span data-cfg="AFCA_PHONE">1800 931 678</span>, <span data-cfg="AFCA_WEB">afca.org.au</span>. <!-- [VERIFY: AFCA details before publishing] --></p>
+      <p data-testid="footer-tmd">Ask us for a copy of our <a href="credit-guide.html">credit guide</a>. This product is designed for [target market]. <a href="tmd.html">Read the target market determination.</a> <!-- [PLACEHOLDER: target market text from the final TMD; VERIFY: counsel] --></p>
+    </div>
+  </div>
+</footer>
+<div class="consent" role="dialog" aria-label="Cookies" data-consent-banner data-testid="consent-banner" hidden>
+  <div class="consent__inner">
+    <p>We use cookies to measure the site and to show our ads to the right people. We set analytics and advertising cookies only if you accept. The site works either way. See our <a href="privacy.html">Privacy Policy</a>.</p>
+    <!-- [VERIFY: counsel] consent wording -->
+    <div class="consent__buttons">
+      <button type="button" class="btn btn--secondary" data-consent="accept" data-testid="consent-accept">Accept</button>
+      <button type="button" class="btn btn--secondary" data-consent="reject" data-testid="consent-reject">Reject</button>
+    </div>
+    <button type="button" class="consent__manage" data-consent="manage" aria-expanded="false" data-testid="consent-manage">Manage</button>
+    <div class="consent__prefs" data-consent-prefs hidden>
+      <div class="check"><input type="checkbox" id="consent-analytics"><label for="consent-analytics">Analytics</label></div>
+      <div class="check"><input type="checkbox" id="consent-ads"><label for="consent-ads">Advertising</label></div>
+      <button type="button" class="btn btn--secondary" data-consent="save" data-testid="consent-save">Save choices</button>
+    </div>
+  </div>
+</div>
+<script src="assets/js/config.js" defer></script>
+<script src="assets/js/analytics.js" defer></script>
+<script src="assets/js/forms.js" defer></script>
+</body>
+</html>

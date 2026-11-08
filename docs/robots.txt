@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Replace with the live address (same base as the canonical tags) before launch.
+Sitemap: https://example.github.io/REPO/sitemap.xml

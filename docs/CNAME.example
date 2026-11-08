@@ -1,0 +1,5 @@
+# Rename this file to CNAME (no extension) once the domain is bought.
+# The file must contain exactly one line: the bare domain, no protocol, no path, no comments.
+# So delete these comment lines after renaming. Example content:
+#   www.example.com.au
+# Pick www or the apex as the canonical host and set the other to redirect (see README).
