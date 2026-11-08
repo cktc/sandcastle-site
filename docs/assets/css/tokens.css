@@ -3,12 +3,13 @@
    Component layout lives in a second file (components.css). */
 
 :root {
-  color-scheme: light dark;
+  color-scheme: light;   /* light-first: bare :root is the light palette; dark is opt-in below */
 
   /* Colour: light. Neutrals lean green-grey (hue ~150). Contrast ratios are in team/02_design_system.md. */
-  --bg: #F2F5F3;
+  --bg: #F8FAF8;
   --surface: #FFFFFF;
-  --surface-sunk: #E7ECE9;
+  --surface-2: #EBF0EC;          /* alternating section bands: warm green-grey paper */
+  --surface-sunk: #DDE5E0;
   --text: #16211D;
   --text-2: #44544C;
   --border: #CBD6D0;
@@ -70,9 +71,11 @@
 /* Dark: follows the system unless the page is forced light. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
+    color-scheme: dark;
     --bg: #101714;
     --surface: #18211D;
-    --surface-sunk: #0C120F;
+    --surface-2: #26332D;
+    --surface-sunk: #0A0F0D;
     --text: #E8EFEB;
     --text-2: #A9B8B0;
     --border: #2B3832;
@@ -95,9 +98,11 @@
   }
 }
 :root[data-theme="dark"] {
+  color-scheme: dark;
   --bg: #101714;
   --surface: #18211D;
-  --surface-sunk: #0C120F;
+  --surface-2: #26332D;
+  --surface-sunk: #0A0F0D;
   --text: #E8EFEB;
   --text-2: #A9B8B0;
   --border: #2B3832;
@@ -174,13 +179,14 @@ p, li, dd { max-width: var(--measure); }
 .muted { color: var(--text-2); }
 strong, b { font-weight: 700; }
 
+/* Inline links: text colour, underlined; the accent appears on hover only. */
 a {
-  color: var(--accent-text);
+  color: var(--text);
   text-decoration: underline;
-  text-underline-offset: 0.2em;
+  text-underline-offset: 3px;
   text-decoration-thickness: 1px;
 }
-a:hover { text-decoration-thickness: 2px; }
+a:not(.btn):hover { color: var(--accent-text); text-decoration-thickness: 2px; }
 
 hr { border: 0; border-top: var(--border-width) solid var(--border); margin: var(--space-6) 0; }
 
@@ -191,7 +197,8 @@ hr { border: 0; border-top: var(--border-width) solid var(--border); margin: var
   margin-inline: auto;
   padding-inline: var(--gutter) var(--gutter-r);
 }
-.container--reading { max-width: var(--reading-max); }
+/* Same width as every container: line length is held by --measure on p/li/dd, so sections align left on one grid. */
+.container--reading { max-width: var(--container-max); }
 
 .card {
   background: var(--surface);
@@ -234,8 +241,8 @@ tfoot th, tfoot td { font-weight: 700; color: var(--text); border-top: 2px solid
 .btn:hover { text-decoration: none; }
 .btn--primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
 .btn--primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
-.btn--secondary { background: transparent; color: var(--accent-text); border-color: var(--accent-text); }
-.btn--secondary:hover { background: var(--accent-soft); }
+.btn--secondary { background: transparent; color: var(--text); border-color: var(--text); }  /* outlined, ranks below primary */
+.btn--secondary:hover { background: var(--surface-2); }
 .btn--block { display: flex; width: 100%; }
 .btn[disabled], .btn[aria-disabled="true"] {
   background: var(--surface-sunk);

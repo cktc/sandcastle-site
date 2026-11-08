@@ -421,3 +421,18 @@ Checked against the StoryBrand wireframe, one-liner formula and common-mistakes 
 6. **Ads:** button changed from "Learn More" to "Apply Now" (mistake 6).
 7. Mistake 1 (brand as hero), 3 (too many words) and 7 (no authority): scanned all pages; copy leads with "you", and authority is the licence, assessment and AFCA, not boasts. No other changes.
 8. No compliance wording changed. Token names unchanged.
+
+## Post-build edits (StoryBrand review, section 6)
+
+Site copy now differs from the deck above in these lines. The site is the source.
+
+- **CTA, all pages:** "Start application" is now "Check your rate" (how-it-works, rates, eligibility, faq, about, tmd). Apply submit "Send my request" is now "Check your rate".
+- **Apply lede:** "Three quick steps: your details, your bank, your estimate. Nothing is sent until the last step." (was "Four short steps. You see an estimate first. Nothing is sent until the last step.")
+- **Thank-you h1:** "Your rate request is in." (was "We have your request"). Last paragraph: "Nothing is signed yet. See how repayments work" (links to how-it-works).
+- **Home hero subhead:** "A personal loan of $2,001 to $5,000, over 3 to 12 months. See the total first, so a bad week stays one bill with an end date."
+- **Home guide h2:** "A surprise bill is stressful. You should not have to rush."
+- **Home plan step 1:** "Pick the amount and term. Answer four quick questions. Connect your bank, read-only. You see your rate and total before you commit."
+- **Home plan:** new "Check your rate" button under step 3.
+- **Home FAQ:** "Will you cut my limit?" is now "Can the amount change after I sign?" (same answer). Both it and "Is this a payday loan?" carry a counsel VERIFY comment.
+- **Rates lede:** "Here is the whole price. A bad week should not set the cost. We put the total first because that is the number that matters."
+- **Not applied:** review edits 4, 5, 10 and 11 (see build report).

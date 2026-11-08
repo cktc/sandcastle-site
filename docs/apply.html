@@ -26,10 +26,10 @@
 <a class="skip-link" href="#main">Skip to main content</a>
 <header class="site-header">
   <div class="container site-header__inner">
-    <a class="wordmark" href="index.html" data-testid="wordmark"><svg class="wordmark__mark" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="6"/><g fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20l7-5 7 5" opacity=".35"/><path d="M7 15l7-5 7 5" opacity=".6"/><path d="M7 10l7-5 7 5"/></g></svg><span data-cfg="BRAND_NAME">Fernbank</span></a>
+    <a class="wordmark" href="index.html" data-testid="wordmark"><svg class="wordmark__mark" viewBox="0 0 28 28" aria-hidden="true"><path d="M5 20C5 11 10 5 19 5c0 9-5 15-14 15z"/><path d="M11 24c0-7 4-11 12-11 0 7-4 11-12 11z"/></svg><span data-cfg="BRAND_NAME">Fernbank</span></a>
     <nav id="site-nav" class="site-nav" aria-label="Main"><ul>
       <li><a href="how-it-works.html">How it works</a></li>
-      <li><a href="rates.html">Rates and fees</a></li>
+      <li><a href="rates.html">Rates</a></li>
       <li><a href="eligibility.html">Who can apply</a></li>
       <li><a href="faq.html">FAQ</a></li>
       <li><a href="hardship.html">Help</a></li>
@@ -43,7 +43,7 @@
 <main id="main" tabindex="-1">
 <section class="page-head"><div class="container container--reading">
   <h1>Check your rate</h1>
-  <p class="lede">Four short steps. You see an estimate first. Nothing is sent until the last step.</p>
+  <p class="lede">Four short steps: the amount, four quick questions, your bank (read-only), where to reach you. Nothing is sent until the last step.</p>
   <p class="muted" data-testid="eligibility-statement">You must be 18 or over and an Australian resident. Terms, fees and lending criteria apply. Approval is not guaranteed.</p>
 </div></section>
 <section class="section section--flush"><div class="container container--reading">
@@ -87,17 +87,15 @@
   <div class="ledger__row"><dt>Establishment fee</dt><dd><span data-est="fee">-</span></dd></div>
   <div class="ledger__row"><dt>Each month</dt><dd><span data-est="monthly">-</span></dd></div>
   <div class="ledger__row"><dt>Interest rate used</dt><dd><span data-est="rate"><span data-cfg="RATE_REP">36.00%</span></span> p.a.</dd></div>
-  <div class="ledger__row"><dt>Comparison rate</dt><dd><span data-est="comparison">-</span> p.a.* <span class="placeholder-note" data-testid="placeholder-note">Illustrative only. Rates and fees are placeholders pending pricing and legal review.</span></dd></div>
+  <div class="ledger__row"><dt>Comparison rate</dt><dd><span data-est="comparison">-</span> p.a.*</dd></div>
 </dl>
-      <p class="warn-text" data-testid="comparison-rate-warning">WARNING: This comparison rate is true only for the example given and may not include all fees and charges. Different terms, fees or other loan amounts might result in a different comparison rate.</p>
-      <div aria-live="polite"><dl class="ledger">
-  
-</dl>
-<dl class="ledger" data-testid="total-repay">
+      <div aria-live="polite"><dl class="ledger" data-testid="total-repay">
   <div class="ledger__row ledger__row--total"><dt>Total you would repay</dt><dd><span data-est="total">-</span></dd></div>
 </dl></div>
       <p class="cost-strip__foot">Estimate only. Your rate depends on your assessment.</p>
     </div>
+    <p class="placeholder-note" data-testid="placeholder-note">Illustrative only. Rates and fees are placeholders pending pricing and legal review.</p>
+    <p class="warn-text" data-testid="comparison-rate-warning">WARNING: This comparison rate is true only for the example given and may not include all fees and charges. Different terms, fees or other loan amounts might result in a different comparison rate.</p>
     <p class="legal legal--gap" data-testid="apply-disclosures"><span data-cfg="BRAND_NAME">Fernbank</span> is a loan from <span data-cfg="LEGAL_ENTITY">Mantis Pty Ltd (placeholder)</span>, Australian credit licence <span data-cfg="ACL_NUMBER">000000</span>. Every application is assessed. We check your income, expenses and bank data to confirm you can repay without hardship. Approval is not guaranteed. Ask us for a copy of our <a href="credit-guide.html" target="_blank" rel="noopener">credit guide (opens in a new tab)</a>. This product is designed for [target market]: <a href="tmd.html" target="_blank" rel="noopener">read the target market determination (opens in a new tab)</a>. <!-- [PLACEHOLDER: target market text from the final TMD] --></p>
     <div class="form-nav"><button type="button" class="btn btn--primary" data-next data-testid="apply-next-1">Continue</button></div>
   </fieldset>
@@ -130,7 +128,7 @@
     <div class="field"><label for="preferred_time">Best time to call (optional)</label><input type="text" id="preferred_time" name="preferred_time" aria-describedby="time-hint" data-testid="field-time"><span class="hint" id="time-hint"><span data-cfg="HOURS">[Days and hours, e.g. Mon to Fri 9am to 5pm AEST]</span></span></div>
     <div class="check"><input type="checkbox" id="contact_consent" name="contact_consent" value="yes" required data-label="the box" data-error="Tick the box so we can call you." aria-describedby="err-contact_consent" data-testid="field-contact-consent"><label for="contact_consent">I agree that <span data-cfg="BRAND_NAME">Fernbank</span> can contact me about this application.</label></div>
     <span class="field-error" id="err-contact_consent" data-error-for="contact_consent"></span>
-    <div class="form-nav"><button type="button" class="btn btn--secondary" data-back data-testid="apply-back-4">Back</button><button type="submit" class="btn btn--primary" data-testid="apply-submit">Send my request</button></div>
+    <div class="form-nav"><button type="button" class="btn btn--secondary" data-back data-testid="apply-back-4">Back</button><button type="submit" class="btn btn--primary" data-testid="apply-submit">Check your rate</button></div>
   </fieldset>
 
   <div data-ineligible hidden tabindex="-1" data-testid="apply-ineligible">

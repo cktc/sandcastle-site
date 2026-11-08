@@ -42,10 +42,10 @@
 <a class="skip-link" href="#main">Skip to main content</a>
 <header class="site-header">
   <div class="container site-header__inner">
-    <a class="wordmark" href="index.html" data-testid="wordmark"><svg class="wordmark__mark" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="6"/><g fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20l7-5 7 5" opacity=".35"/><path d="M7 15l7-5 7 5" opacity=".6"/><path d="M7 10l7-5 7 5"/></g></svg><span data-cfg="BRAND_NAME">Fernbank</span></a>
+    <a class="wordmark" href="index.html" data-testid="wordmark"><svg class="wordmark__mark" viewBox="0 0 28 28" aria-hidden="true"><path d="M5 20C5 11 10 5 19 5c0 9-5 15-14 15z"/><path d="M11 24c0-7 4-11 12-11 0 7-4 11-12 11z"/></svg><span data-cfg="BRAND_NAME">Fernbank</span></a>
     <nav id="site-nav" class="site-nav" aria-label="Main"><ul>
       <li><a href="how-it-works.html">How it works</a></li>
-      <li><a href="rates.html">See the full rate card</a></li>
+      <li><a href="rates.html">Rates</a></li>
       <li><a href="eligibility.html">Who can apply</a></li>
       <li><a href="faq.html">FAQ</a></li>
       <li><a href="hardship.html">Help</a></li>
@@ -60,16 +60,16 @@
 <section class="hero" data-testid="hero"><div class="container hero__grid">
   <div>
     <h1 class="display hero__title">Know what you will repay before you apply.</h1>
-    <p class="lede hero__sub">A personal loan of $2,001 to $5,000, over 3 to 12 months. You see the total first. Your repayments are equal, so you can plan around them.</p>
+    <p class="lede hero__sub">A personal loan of $2,001 to $5,000, over 3 to 12 months. See the total first, so a bad week stays one bill with an end date.</p>
     <!-- [PLACEHOLDER: "equal" assumes monthly repayments] -->
     <div class="hero__actions">
       <a class="btn btn--primary btn--block" href="apply.html" data-cta="hero-check-rate" data-testid="cta-hero">Check your rate</a>
       <a class="link-more" href="rates.html" data-cta="hero-rate-card" data-testid="cta-rate-card">See the full rate card</a>
     </div>
     <p class="hero__note" data-testid="eligibility-statement">You must be 18 or over and an Australian resident. Terms, fees and lending criteria apply. Approval is not guaranteed.</p>
-    <p class="hero__note" data-testid="responsible-lending">Every application is assessed. We check your income, expenses and bank data to confirm you can repay without hardship. Approval is not guaranteed.</p>
     <!-- Add "Checking your rate will not affect your credit score" only if Mantis confirms it (open item 6). -->
   </div>
+  <div class="hero__card">
   <div class="cost-strip" data-testid="cost-strip">
     <h2 class="cost-strip__title">What it costs</h2>
     <p class="cost-strip__lead">One real example, every dollar shown. Your numbers may differ.</p>
@@ -79,20 +79,19 @@
   <div class="ledger__row"><dt>Over</dt><dd><span data-cfg="EXAMPLE_TERM">12 months</span></dd></div>
   <div class="ledger__row"><dt>Each month you repay</dt><dd><span data-cfg="EXAMPLE_MONTHLY">$331.52</span></dd></div>
   <div class="ledger__row"><dt>Interest rate</dt><dd><span data-cfg="RATE_REP">36.00%</span> p.a.</dd></div>
-  <div class="ledger__row"><dt>Comparison rate</dt><dd><span data-cfg="COMPARISON_RATE_EXAMPLE">48.76%</span> p.a.* <span class="placeholder-note" data-testid="placeholder-note">Illustrative only. Rates and fees are placeholders pending pricing and legal review.</span></dd></div>
-</dl>
-    <p class="warn-text" data-testid="comparison-rate-warning">WARNING: This comparison rate is true only for the example given and may not include all fees and charges. Different terms, fees or other loan amounts might result in a different comparison rate.</p>
-    <dl class="ledger">
-  
+  <div class="ledger__row"><dt>Comparison rate</dt><dd><span data-cfg="COMPARISON_RATE_EXAMPLE">48.76%</span> p.a.*</dd></div>
 </dl>
 <dl class="ledger" data-testid="total-repay">
   <div class="ledger__row ledger__row--total"><dt>You repay in total</dt><dd><span data-cfg="EXAMPLE_TOTAL">$3,978.24</span></dd></div>
 </dl>
     <p class="cost-strip__foot">Example only. Your rate depends on your assessment. Rates range from <span data-cfg="RATE_MIN">20%</span> to <span data-cfg="RATE_MAX">48%</span> p.a. <a href="rates.html">See the full rate card.</a></p>
   </div>
+  <p class="placeholder-note" data-testid="placeholder-note">Illustrative only. Rates and fees are placeholders pending pricing and legal review.</p>
+  <p class="warn-text" data-testid="comparison-rate-warning">WARNING: This comparison rate is true only for the example given and may not include all fees and charges. Different terms, fees or other loan amounts might result in a different comparison rate.</p>
+  </div>
 </div></section>
 
-<section class="section section--surface" data-testid="stakes"><div class="container container--reading">
+<section class="section section--alt" data-testid="stakes"><div class="container">
   <h2>The price of a bad week</h2>
   <p>The car fails its roadworthy. A tooth cracks. The bond on the new place is due before the old one comes back.</p>
   <p>In a rush, it is easy to take the first offer and find the real cost later. That leaves you worried about the fine print and about the next payment.</p>
@@ -103,8 +102,8 @@
   </div>
 </div></section>
 
-<section class="section" data-testid="value-stack"><div class="container container--reading">
-  <h2 class="visually-hidden">What you get</h2>
+<section class="section" data-testid="value-stack"><div class="container">
+  <h2>What you get</h2>
   <ul class="tick-list">
     <li>You see the total in dollars before you apply.</li>
     <li>Every repayment is the same, so you can plan your pay around it.</li>
@@ -113,9 +112,9 @@
   </ul>
 </div></section>
 
-<section class="section section--surface" data-testid="guide"><div class="container">
+<section class="section section--alt" data-testid="guide"><div class="container">
   <div class="reading-block">
-    <h2>We know a surprise bill is stressful</h2>
+    <h2>A surprise bill is stressful. You should not have to rush.</h2>
     <p>You did not plan for this and should not be rushed.</p>
     <p><span data-cfg="BRAND_NAME">Fernbank</span> is a loan from Mantis, an Australian credit licensee (<span data-cfg="ACL_NUMBER">000000</span>). Every application is assessed, and AFCA covers complaints.</p>
     <!-- Licence appears only here (trust row), in the footer and on the about page. [VERIFY: counsel] No reviews, stars or counts until Mantis supplies verified links (spec s 8). -->
@@ -132,10 +131,12 @@
 <section class="section" data-testid="plan"><div class="container">
   <h2>How it works in three steps</h2>
   <ol class="steps">
-    <li class="step"><span class="step__num" aria-hidden="true">1</span><h3 class="step__title">Check your rate</h3><p class="step__text">Tell us the amount and term. Connect your bank, read-only. Answer a few questions. You see your rate and total before you commit.</p></li>
+    <li class="step"><span class="step__num" aria-hidden="true">1</span><h3 class="step__title">Check your rate</h3><p class="step__text">Pick the amount and term. Answer four quick questions. Connect your bank, read-only. You see your rate and total before you commit.</p></li>
     <li class="step"><span class="step__num" aria-hidden="true">2</span><h3 class="step__title">Choose your repayments</h3><p class="step__text">Pick 3 to 12 months. Each repayment is the same. Repay early and pay no early-repayment fee.</p></li>
     <li class="step"><span class="step__num" aria-hidden="true">3</span><h3 class="step__title">Get your money</h3><p class="step__text">Once approved and signed, <span data-cfg="FUNDS_TIME">we pay it into your bank account once you accept</span>.</p><!-- [PLACEHOLDER: state a time only if measured; else "We pay it into your bank account once you accept."] --></li>
   </ol>
+  <div class="cta-row"><a class="btn btn--primary" href="apply.html" data-cta="plan-check-rate" data-testid="cta-plan">Check your rate</a></div>
+  <p class="plan__note" data-testid="responsible-lending">Every application is assessed. We check your income, expenses and bank data to confirm you can repay without hardship. Approval is not guaranteed.</p>
   <details class="read-more reading-block" data-testid="read-more">
     <summary>Read more</summary>
     <p><span data-cfg="BRAND_NAME">Fernbank</span> is a personal loan of $2,001 to $5,000 from Mantis, over 3 to 12 months with equal repayments. Your rate is set from your income and spending, and your credit history where we use it. Every application is assessed. You see the rate, repayment and total before you accept. Repay early with no fee.</p>
@@ -143,10 +144,10 @@
   </details>
 </div></section>
 
-<section class="section section--surface" data-testid="faq-teaser"><div class="container container--reading">
+<section class="section section--alt" data-testid="faq-teaser"><div class="container">
   <h2>Questions people ask first</h2>
   <details class="faq__item" data-testid="faq-item">
-  <summary class="faq__q"><span>Will you cut my limit?</span><svg class="faq__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5"/></svg></summary>
+  <summary class="faq__q"><span>Can the amount change after I sign?</span> <!-- [VERIFY] counsel: wording flagged by StoryBrand review --><svg class="faq__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5"/></svg></summary>
   <div class="faq__a"><p>No. Your loan amount is set in your contract. We cannot reduce it or call it back once you accept, as long as you keep to the contract.</p></div><!-- [VERIFY: counsel] -->
 </details>
 <details class="faq__item" data-testid="faq-item">
@@ -154,13 +155,13 @@
   <div class="faq__a"><p>Tell us early. Call <span data-cfg="PHONE">1300 000 000</span>. You may pay a late fee of <span data-cfg="LATE_FEE">[$ amount, or None]</span> and interest on the unpaid amount. We will talk through options, such as a new date. You can go to AFCA if you disagree.</p></div><!-- [PLACEHOLDER fees; OPS options] -->
 </details>
 <details class="faq__item" data-testid="faq-item">
-  <summary class="faq__q"><span>Is this a payday loan?</span><svg class="faq__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5"/></svg></summary>
+  <summary class="faq__q"><span>Is this a payday loan?</span> <!-- [VERIFY] counsel: wording flagged by StoryBrand review --><svg class="faq__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5"/></svg></summary>
   <div class="faq__a"><p>It is a personal loan of $2,001 to $5,000 over 3 to 12 months, with equal repayments. You repay it with interest and fees. It is not an advance on your next pay.</p></div><!-- [VERIFY: counsel before any flat "No"] -->
 </details>
   <p class="faq-more"><a class="link-more" href="faq.html">See all questions</a></p>
 </div></section>
 
-<section class="cta-band" data-testid="cta-band"><div class="container container--reading">
+<section class="cta-band" data-testid="cta-band"><div class="container">
   <h2>See your total before you decide</h2>
   <p>Do not let the price of a bad week choose for you. It takes about <span data-cfg="APPLY_MINUTES">5</span> minutes. You can stop at any step. <!-- [PLACEHOLDER: measure the minutes] --></p>
   <a class="btn btn--primary" href="apply.html" data-cta="closing" data-testid="cta-closing">Check your rate</a>

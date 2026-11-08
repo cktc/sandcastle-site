@@ -26,10 +26,10 @@
 <a class="skip-link" href="#main">Skip to main content</a>
 <header class="site-header">
   <div class="container site-header__inner">
-    <a class="wordmark" href="index.html" data-testid="wordmark"><svg class="wordmark__mark" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="6"/><g fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20l7-5 7 5" opacity=".35"/><path d="M7 15l7-5 7 5" opacity=".6"/><path d="M7 10l7-5 7 5"/></g></svg><span data-cfg="BRAND_NAME">Fernbank</span></a>
+    <a class="wordmark" href="index.html" data-testid="wordmark"><svg class="wordmark__mark" viewBox="0 0 28 28" aria-hidden="true"><path d="M5 20C5 11 10 5 19 5c0 9-5 15-14 15z"/><path d="M11 24c0-7 4-11 12-11 0 7-4 11-12 11z"/></svg><span data-cfg="BRAND_NAME">Fernbank</span></a>
     <nav id="site-nav" class="site-nav" aria-label="Main"><ul>
       <li><a href="how-it-works.html">How it works</a></li>
-      <li><a href="rates.html" aria-current="page">Rates and fees</a></li>
+      <li><a href="rates.html" aria-current="page">Rates</a></li>
       <li><a href="eligibility.html">Who can apply</a></li>
       <li><a href="faq.html">FAQ</a></li>
       <li><a href="hardship.html">Help</a></li>
@@ -43,7 +43,7 @@
 <main id="main" tabindex="-1">
 <section class="page-head"><div class="container container--reading">
   <h1>Rates and fees</h1>
-  <p class="lede">Here is the whole price. We put the total first because that is the number that matters.</p>
+  <p class="lede">Here is the whole price. A bad week should not set the cost. We put the total first because that is the number that matters.</p>
 </div></section>
 <section class="section" data-testid="rate-card-section"><div class="container container--reading">
   <article class="rate-card card" data-testid="rate-card">
@@ -52,9 +52,10 @@
   <div class="ledger__row"><dt>Amount</dt><dd>$2,001 to $5,000</dd></div>
   <div class="ledger__row"><dt>Term</dt><dd>3 to 12 months</dd></div>
   <div class="ledger__row"><dt>Interest rate</dt><dd><span data-cfg="RATE_MIN">20%</span> to <span data-cfg="RATE_MAX">48%</span> p.a.</dd></div>
-  <div class="ledger__row"><dt>Comparison rate</dt><dd><span data-cfg="COMPARISON_RATE_EXAMPLE">48.76%</span> p.a.* <span class="placeholder-note" data-testid="placeholder-note">Illustrative only. Rates and fees are placeholders pending pricing and legal review.</span></dd></div>
+  <div class="ledger__row"><dt>Comparison rate</dt><dd><span data-cfg="COMPARISON_RATE_EXAMPLE">48.76%</span> p.a.*</dd></div>
   <div class="ledger__row"><dt>Fees</dt><dd>Stated in dollars below</dd></div>
 </dl>
+    <p class="placeholder-note" data-testid="placeholder-note">Illustrative only. Rates and fees are placeholders pending pricing and legal review.</p>
     <p class="warn-text" data-testid="comparison-rate-warning">WARNING: This comparison rate is true only for the example given and may not include all fees and charges. Different terms, fees or other loan amounts might result in a different comparison rate.</p>
     <h3>Worked example</h3>
     <p>Your rate depends on your assessment. This shows how the numbers work.</p>
@@ -80,7 +81,7 @@
     <p class="rate-card__foot" data-testid="comparison-rate-warning">WARNING: This comparison rate is true only for the example given and may not include all fees and charges. Different terms, fees or other loan amounts might result in a different comparison rate.</p>
   </article>
 </div></section>
-<section class="section section--surface"><div class="container container--reading prose">
+<section class="section section--alt"><div class="container container--reading prose">
   <h2>Our rate range</h2>
   <p>Rates run from <span data-cfg="RATE_MIN">20%</span> to <span data-cfg="RATE_MAX">48%</span> p.a., depending on your assessment. The example uses <span data-cfg="RATE_REP">36.00%</span> p.a.</p>
   <!-- [PLACEHOLDER] -->
@@ -91,7 +92,7 @@
     <li>Dishonour fee: <span data-cfg="DISHONOUR_FEE">[$ amount, or None]</span>. <!-- [PLACEHOLDER: dollar figure or "None"] --></li>
     <li>Early repayment: No fee.</li>
   </ul>
-  <div class="cta-row"><a class="btn btn--primary" href="apply.html" data-cta="rates-start" data-testid="cta-rates-start">Start application</a></div>
+  <div class="cta-row"><a class="btn btn--primary" href="apply.html" data-cta="rates-start" data-testid="cta-rates-start">Check your rate</a></div>
 </div></section>
 </main>
 <footer class="site-footer" data-testid="site-footer">

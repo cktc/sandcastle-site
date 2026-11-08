@@ -14,14 +14,15 @@ All values are tokens on `:root`. Dark values apply under `@media (prefers-color
 
 | Token | Light | Dark | Role |
 |---|---|---|---|
-| `--bg` | #F2F5F3 | #101714 | Page |
+| `--bg` | #F8FAF8 | #101714 | Page |
 | `--surface` | #FFFFFF | #18211D | Cards, inputs, tables |
-| `--surface-sunk` | #E7ECE9 | #0C120F | Disabled, footer band |
+| `--surface-2` | #EBF0EC | #26332D | Alternating section bands (`.section--alt`) |
+| `--surface-sunk` | #DDE5E0 | #0A0F0D | Disabled, footer band |
 | `--text` | #16211D | #E8EFEB | Primary text |
 | `--text-2` | #44544C | #A9B8B0 | Secondary text |
 | `--border` | #CBD6D0 | #2B3832 | Dividers, card edges |
 | `--border-strong` | #7C8D84 | #6A7C73 | Input borders, leader lines, icons |
-| `--accent` | #0E5A63 | #5FC1CB | Primary button, links |
+| `--accent` | #0E5A63 | #5FC1CB | Primary button, focus ring, active nav. Not inline links, icons or the secondary button |
 | `--accent-ink` | #FFFFFF | #0B1512 | Label on accent |
 | `--accent-soft` | #DCEBEC | #17313A | Secondary hover, selected card |
 | `--success` / `--success-bg` | #1B6B3A / #E3F1E7 | #7FD39A / #16301F | Confirmed, saved |
