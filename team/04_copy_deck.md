@@ -421,6 +421,7 @@ Checked against the StoryBrand wireframe, one-liner formula and common-mistakes 
 6. **Ads:** button changed from "Learn More" to "Apply Now" (mistake 6).
 7. Mistake 1 (brand as hero), 3 (too many words) and 7 (no authority): scanned all pages; copy leads with "you", and authority is the licence, assessment and AFCA, not boasts. No other changes.
 8. No compliance wording changed. Token names unchanged.
+9. **8 Nov 2026, offer stack and pricing.** Pricing decision (Chris, 8 Nov 2026): 48% p.a. plus the $400 MACC maximum establishment fee. The home page gained a "Two promises" block and "Four things included"; how-it-works, rates, FAQ and apply carry the 10-minute decision and the 48-hour change of mind; the closing band carries the honest launch-cap line. New tokens listed in section F. Source: `reports/Grand slam offer canvas 1.md`.
 
 ## Post-build edits (StoryBrand review, section 6)
 
@@ -436,3 +437,39 @@ Site copy now differs from the deck above in these lines. The site is the source
 - **Home FAQ:** "Will you cut my limit?" is now "Can the amount change after I sign?" (same answer). Both it and "Is this a payday loan?" carry a counsel VERIFY comment.
 - **Rates lede:** "Here is the whole price. A bad week should not set the cost. We put the total first because that is the number that matters."
 - **Not applied:** review edits 4, 5, 10 and 11 (see build report).
+
+## F. Offer stack (8 Nov 2026)
+
+Added after the site was built, so it takes the letter F: section E above is the grunt test. The site is the source; this section records what was added and why. Offer: `reports/Grand slam offer canvas 1.md`.
+
+**Two promises** (home, block `data-testid="promises"`; repeated in how-it-works step 1, FAQ and apply step 1)
+
+1. **The 10-minute decision.** "Link your bank in business hours and you have a decision in 10 minutes, or the $400 establishment fee is waived." Always with "A decision, not an approval." or "Approval is not guaranteed." beside it.
+2. **48 hours to change your mind.** "Repay the money within two days of it landing and you owe nothing."
+
+**Four included extras** (home, `data-testid="extras"`)
+
+1. Payday match: repayments on your payday, one free date move a year.
+2. Early exit, no fee: clear the $3,100 example at month 6 and save about $283.
+3. Your amount is yours: no limit cuts or recalls while you keep to the contract.
+4. Good-payer rate: after six on-time repayments, eligible for a lower rate on any later loan.
+
+**Scarcity line (the only one allowed).** "We are funding a limited number of loans a month during launch." No countdowns, deadlines or "offer ends".
+
+**Removed.** Every funding-time claim (`FUNDS_TIME` is no longer used by any page). The promise is the decision, not the money.
+
+**New or changed tokens** (all in `config.js`)
+
+| Token | Value | Note |
+|---|---|---|
+| `DECISION_PROMISE_MINUTES` | 10 | OPS: measure before launch (RG 234) |
+| `FEE_WAIVER_AMOUNT` | $400 | From the card |
+| `CHANGE_OF_MIND_HOURS` | 48 | Counsel |
+| `FREE_DATE_MOVES` | one | Contract term |
+| `GOOD_PAYER_REPAYMENTS` | six | Counsel |
+| `LAUNCH_CAP_NOTE` | the scarcity line | Must stay true |
+| `EARLY_EXIT_MONTH`, `EARLY_EXIT_SAVING` | 6, $283 | Computed from the card |
+| `EXAMPLE_SMALL_AMOUNT`, `_TERM`, `_MONTHLY`, `_TOTAL`, `_COST` | $2,001, 3 months, $865.20, $2,595.60, $594.60 | Rates page |
+| `COMPARISON_RATE_SMALL` | 170.74% | Warning directly under it |
+| `DECISION_TIME` | "You get a decision within 10 minutes of linking your bank, in business hours" | Changed |
+| `RATE_REP`, `EXAMPLE_*`, `COMPARISON_RATE_EXAMPLE` | 48.00%, $372.93 a month, $4,475.16 total, 73.87% | Recomputed |

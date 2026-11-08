@@ -121,6 +121,30 @@
     "@type": "Answer",
     "text": "Call or write to us first. If you are not happy, you can go to AFCA, free and independent: 1800 931 678, afca.org.au."
    }
+  },
+  {
+   "@type": "Question",
+   "name": "What if my decision takes longer than 10 minutes?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Then the establishment fee is waived. The clock starts when your bank link completes, in business hours. It is a decision we promise, not an approval; every application is assessed."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I change my mind after the money arrives?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Repay the full amount within 48 hours of it landing and you owe nothing, no interest and no fee."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is the good-payer rate?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "After six on-time repayments you are eligible for a lower rate on any later loan with us. Eligible means we assess you again; it is not automatic."
+   }
   }
  ]
 }
@@ -187,7 +211,7 @@
 </details>
 <details class="faq__item" data-testid="faq-item">
   <summary class="faq__q"><span>How long until I know?</span><svg class="faq__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5"/></svg></summary>
-  <div class="faq__a"><p><span data-cfg="DECISION_TIME">You get a decision once we have assessed your application</span>. We tell you the decision and the reasons.</p></div><!-- [PLACEHOLDER: only if measured] -->
+  <div class="faq__a"><p><span data-cfg="DECISION_TIME">You get a decision within 10 minutes of linking your bank, in business hours</span>. A decision, not an approval. We tell you the decision and the reasons.</p></div><!-- [PLACEHOLDER: only if measured] -->
 </details>
 <details class="faq__item" data-testid="faq-item">
   <summary class="faq__q"><span>I am struggling to pay. Who do I talk to?</span><svg class="faq__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5"/></svg></summary>
@@ -196,6 +220,18 @@
 <details class="faq__item" data-testid="faq-item">
   <summary class="faq__q"><span>How do I make a complaint?</span><svg class="faq__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5"/></svg></summary>
   <div class="faq__a"><p>Call or write to us first. If you are not happy, you can go to AFCA, free and independent: <span data-cfg="AFCA_PHONE">1800 931 678</span>, <span data-cfg="AFCA_WEB">afca.org.au</span>.</p></div><!-- [VERIFY: AFCA details] -->
+</details>
+<details class="faq__item" data-testid="faq-item">
+  <summary class="faq__q"><span>What if my decision takes longer than <span data-cfg="DECISION_PROMISE_MINUTES">10</span> minutes?</span><svg class="faq__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5"/></svg></summary>
+  <div class="faq__a"><p>Then the establishment fee is waived. The clock starts when your bank link completes, in business hours. It is a decision we promise, not an approval; every application is assessed.</p></div><!-- [VERIFY: counsel] [OPS: measure the time and the waiver process before any public claim] -->
+</details>
+<details class="faq__item" data-testid="faq-item">
+  <summary class="faq__q"><span>Can I change my mind after the money arrives?</span><svg class="faq__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5"/></svg></summary>
+  <div class="faq__a"><p>Yes. Repay the full amount within <span data-cfg="CHANGE_OF_MIND_HOURS">48</span> hours of it landing and you owe nothing, no interest and no fee.</p></div><!-- [VERIFY: counsel] against the contract's termination and early-payout clauses -->
+</details>
+<details class="faq__item" data-testid="faq-item">
+  <summary class="faq__q"><span>What is the good-payer rate?</span><svg class="faq__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5"/></svg></summary>
+  <div class="faq__a"><p>After <span data-cfg="GOOD_PAYER_REPAYMENTS">six</span> on-time repayments you are eligible for a lower rate on any later loan with us. Eligible means we assess you again; it is not automatic.</p></div><!-- [VERIFY: counsel] "eligible for", never "will get"; inducement to re-borrow -->
 </details>
   <div class="cta-row"><a class="btn btn--primary" href="apply.html" data-cta="faq-start" data-testid="cta-faq-start">Check your rate</a></div>
 </div></section>

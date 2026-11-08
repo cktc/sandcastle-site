@@ -46,9 +46,9 @@
 </div></section>
 <section class="section"><div class="container">
   <ol class="steps" data-testid="steps">
-    <li class="step"><span class="step__num" aria-hidden="true">1</span><h2 class="step__title">Check your rate</h2><p class="step__text">Pick $2,001 to $5,000 and 3 to 12 months. Answer four quick questions. Connect your bank, read-only. You see your rate, repayment and total.</p></li>
+    <li class="step"><span class="step__num" aria-hidden="true">1</span><h2 class="step__title">Check your rate</h2><p class="step__text">Pick $2,001 to $5,000 and 3 to 12 months. Answer four quick questions. Connect your bank, read-only. You see your rate, repayment and total. Link your bank in business hours and you have a decision in <span data-cfg="DECISION_PROMISE_MINUTES">10</span> minutes, or the <span data-cfg="FEE_WAIVER_AMOUNT">$400</span> fee is waived. A decision, not an approval.</p></li>
     <li class="step"><span class="step__num" aria-hidden="true">2</span><h2 class="step__title">Choose your repayments</h2><p class="step__text">Every repayment is the same. You pick the term that suits your pay. Pay off early whenever you like: no early-repayment fee, and interest stops.</p></li>
-    <li class="step"><span class="step__num" aria-hidden="true">3</span><h2 class="step__title">Get your money</h2><p class="step__text">If you are approved, you read your contract and accept it. We pay the money into your bank account.</p><!-- Copy deck adds the FUNDS_TIME sentence here [PLACEHOLDER; only if measured]. Left out: the home page already carries it, and the deck's own fallback is the sentence above. --></li>
+    <li class="step"><span class="step__num" aria-hidden="true">3</span><h2 class="step__title">Get your money</h2><p class="step__text">If you are approved, you read your contract and accept it. We pay the money into your bank account.</p><!-- No funding-time claim (offer canvas s 4: promise the decision, not the money). FUNDS_TIME stays in config.js unused until Mantis measures it. --></li>
   </ol>
 </div></section>
 <section class="section section--alt"><div class="container container--reading prose">
@@ -56,6 +56,9 @@
   <p data-testid="responsible-lending">Every application is assessed. We check your income, expenses and bank data to confirm you can repay without hardship. Approval is not guaranteed.</p>
   <p>Your rate is set from your income and spending, and your credit history where we use it.</p>
   <!-- [OPS / open item 6: Mantis must confirm exactly what it uses] -->
+  <h3>Change your mind</h3>
+  <p>Repay the full amount within <span data-cfg="CHANGE_OF_MIND_HOURS">48</span> hours of the money landing and you owe nothing. No interest and no fee.</p>
+  <!-- [VERIFY: counsel] against the contract's termination and early-payout clauses -->
   <h3>If we say no</h3>
   <p>We tell you why, in plain words, and what you can do next. <a href="eligibility.html#decline">See what a decline tells you.</a></p>
   <!-- [OPS] -->

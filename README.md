@@ -82,10 +82,12 @@ Copied from `team/06_qa_compliance.md` section 6, plus the open counsel and copy
 - [ ] Hardship contact "[Name]", complaint reply "[number] business days", callback "[response time]".
 - [ ] Credit guide, TMD and privacy are frames: "[Mantis legal ...]" and "will be linked here as a PDF" show. Link the real PDFs.
 - [ ] Tracking IDs (Meta, Google tag, GA4) and `FORM_ENDPOINT` are blank; the submit shows an error and sends nothing.
-- [ ] Counsel sign-off on the 48.76% comparison rate (48% cap, establishment fee treatment, display beside "20% to 48%"). Then remove the `.placeholder-note` lines.
+- [ ] Counsel sign-off on the comparison rates shown at 48% plus the $400 fee (73.87% on the $3,100 example, 170.74% on the $2,001 over 3 months example): confirm the MACC establishment fee sits outside the 48% annual cost rate cap (NCC s 32B). Then remove the `.placeholder-note` lines.
 - [ ] Counsel on the "Check your rate" CTA and "You see your rate" wording against a flat-rate estimate.
 - [ ] Counsel on the FAQ "Will you cut my limit? No." answer.
 - [ ] Measure or cut "about 5 minutes" (`APPLY_MINUTES`).
+- [ ] Measure the 10-minute decision time and the waiver process before any public claim (`DECISION_PROMISE_MINUTES`, `DECISION_TIME`).
+- [ ] Counsel on the 48-hour change of mind and the good-payer rate.
 - [ ] Counsel on the 3-month minimum term against Meta's 90-day rule for loans repayable within 90 days.
 
 ## Pre-launch checklist

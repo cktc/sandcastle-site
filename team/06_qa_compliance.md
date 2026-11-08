@@ -13,6 +13,7 @@ The copy follows the deck closely. No prohibited claim appears, the rate-card fi
 | Sev | Page | Line | Issue | Status |
 |---|---|---|---|---|
 | High | index, rates, apply | idx 81; rates 55, 75; apply estimate | Comparison rate 48.76% is above the 48% cap (open item 3). Only HTML comments flag it; customers see no PLACEHOLDER or counsel flag. Rates page shows it beside "20% to 48%". | Open |
+| High | all pages | rates, index, apply | The 73.87% example comparison rate and the 170.74% small-example comparison rate are now shown (48% plus a $400 fee). Counsel to confirm the MACC fee sits outside the 48% cap (NCC s 32B). Supersedes the 48.76% finding above. | Open, counsel |
 | High | index, apply | whole page | No "18+" statement. Apply has only the step-2 tick box. The ads rely on the page for Meta's 18+ expectation. | Open |
 | High | all | footers etc. | Placeholders render (section 6). | Open |
 | Med | rates | 75 vs 80 | In the worked-example table the warning is not directly under the comparison-rate row (it follows the table). The ledger at 55-58 is correct. | Open, copywriter/designer |
@@ -133,3 +134,15 @@ The ads would land on home or apply.
 4. Measure or cut "about 5 minutes".
 5. Remove the self-link to "Privacy Policy" on the privacy page.
 6. Reconsider the bold "Licensed credit provider" trust-row title.
+
+## Items added by the offer (8 Nov 2026)
+
+From `reports/Grand slam offer canvas 1.md` section 10.
+
+1. The decision guarantee: wording that it is a decision, not approval; substantiation of the 10 minutes before public launch (RG 234); how the waiver is applied in the contract.
+2. The 48-hour change of mind against the contract's termination and early-payout clauses.
+3. The good-payer rate as an inducement to re-borrow, and its place in the target market determination.
+4. Payday match and the free date move as contract variation terms.
+5. Comparison rates above 48% with a $400 fee, and the small-short-loan rows in particular.
+6. Whether a soft enquiry is available; if not, remove every "will not affect your credit score" line.
+7. Operations must hold the 10-minute clock in business hours, including the manual-review lane, and log every miss so the waiver is paid without the customer asking.

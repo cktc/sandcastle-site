@@ -77,17 +77,35 @@
     <dl class="ledger" data-testid="cost-strip-ledger">
   <div class="ledger__row"><dt>You borrow</dt><dd><span data-cfg="EXAMPLE_AMOUNT">$3,100</span></dd></div>
   <div class="ledger__row"><dt>Over</dt><dd><span data-cfg="EXAMPLE_TERM">12 months</span></dd></div>
-  <div class="ledger__row"><dt>Each month you repay</dt><dd><span data-cfg="EXAMPLE_MONTHLY">$331.52</span></dd></div>
-  <div class="ledger__row"><dt>Interest rate</dt><dd><span data-cfg="RATE_REP">36.00%</span> p.a.</dd></div>
-  <div class="ledger__row"><dt>Comparison rate</dt><dd><span data-cfg="COMPARISON_RATE_EXAMPLE">48.76%</span> p.a.*</dd></div>
+  <div class="ledger__row"><dt>Each month you repay</dt><dd><span data-cfg="EXAMPLE_MONTHLY">$372.93</span></dd></div>
+  <div class="ledger__row"><dt>Establishment fee</dt><dd><span data-cfg="EXAMPLE_FEE">$400</span></dd></div>
+  <div class="ledger__row"><dt>Interest rate</dt><dd><span data-cfg="RATE_REP">48.00%</span> p.a.</dd></div>
+  <div class="ledger__row"><dt>Comparison rate</dt><dd><span data-cfg="COMPARISON_RATE_EXAMPLE">73.87%</span> p.a.*</dd></div>
 </dl>
 <dl class="ledger" data-testid="total-repay">
-  <div class="ledger__row ledger__row--total"><dt>You repay in total</dt><dd><span data-cfg="EXAMPLE_TOTAL">$3,978.24</span></dd></div>
+  <div class="ledger__row ledger__row--total"><dt>You repay in total</dt><dd><span data-cfg="EXAMPLE_TOTAL">$4,475.16</span></dd></div>
 </dl>
     <p class="cost-strip__foot">Example only. Your rate depends on your assessment. Rates range from <span data-cfg="RATE_MIN">20%</span> to <span data-cfg="RATE_MAX">48%</span> p.a. <a href="rates.html">See the full rate card.</a></p>
   </div>
   <p class="placeholder-note" data-testid="placeholder-note">Illustrative only. Rates and fees are placeholders pending pricing and legal review.</p>
   <p class="warn-text" data-testid="comparison-rate-warning">WARNING: This comparison rate is true only for the example given and may not include all fees and charges. Different terms, fees or other loan amounts might result in a different comparison rate.</p>
+  </div>
+</div></section>
+
+<section class="section" data-testid="promises"><div class="container">
+  <h2>Two promises</h2>
+  <div class="grid-2">
+    <div class="callout" data-testid="promise-decision">
+      <h3>The 10-minute decision</h3>
+      <p>Link your bank in business hours and you have a decision in <span data-cfg="DECISION_PROMISE_MINUTES">10</span> minutes, or the <span data-cfg="FEE_WAIVER_AMOUNT">$400</span> establishment fee is waived.</p>
+      <p><strong>A decision, not an approval.</strong> Every application is assessed.</p>
+      <!-- [VERIFY: counsel] and [OPS: measure the time before any public claim, RG 234] -->
+    </div>
+    <div class="callout" data-testid="promise-change-of-mind">
+      <h3><span data-cfg="CHANGE_OF_MIND_HOURS">48</span> hours to change your mind</h3>
+      <p>Repay the money within two days of it landing and you owe nothing.</p>
+      <!-- [VERIFY: counsel] against the contract's early-termination terms -->
+    </div>
   </div>
 </div></section>
 
@@ -103,12 +121,12 @@
 </div></section>
 
 <section class="section" data-testid="value-stack"><div class="container">
-  <h2>What you get</h2>
-  <ul class="tick-list">
-    <li>You see the total in dollars before you apply.</li>
-    <li>Every repayment is the same, so you can plan your pay around it.</li>
-    <li>Pay early and pay no early-repayment fee.</li>
-    <li>If we say no, we tell you why.</li>
+  <h2>Four things included</h2>
+  <ul class="tick-list" data-testid="extras">
+    <li><strong>Payday match.</strong> Repayments land on your payday, and you get <span data-cfg="FREE_DATE_MOVES">one</span> free date move a year.</li>
+    <li><strong>Early exit, no fee.</strong> Pay it off whenever you like and pay nothing extra. Clear the <span data-cfg="EXAMPLE_AMOUNT">$3,100</span> example at month <span data-cfg="EARLY_EXIT_MONTH">6</span> and you save about <span data-cfg="EARLY_EXIT_SAVING">$283</span>.</li>
+    <li><strong>Your amount is yours.</strong> No limit cuts or recalls while you keep to the contract. <!-- [VERIFY: counsel] wording flagged by the QA review; keep the condition --></li>
+    <li><strong>Good-payer rate.</strong> After <span data-cfg="GOOD_PAYER_REPAYMENTS">six</span> on-time repayments you are eligible for a lower rate on any later loan. <!-- [VERIFY: counsel] "eligible for", never "will get"; inducement to re-borrow --></li>
   </ul>
 </div></section>
 
@@ -131,9 +149,9 @@
 <section class="section" data-testid="plan"><div class="container">
   <h2>How it works in three steps</h2>
   <ol class="steps">
-    <li class="step"><span class="step__num" aria-hidden="true">1</span><h3 class="step__title">Check your rate</h3><p class="step__text">Pick the amount and term. Answer four quick questions. Connect your bank, read-only. You see your rate and total before you commit.</p></li>
+    <li class="step"><span class="step__num" aria-hidden="true">1</span><h3 class="step__title">Check your rate</h3><p class="step__text">Pick the amount and term. Answer four quick questions. Connect your bank, read-only. You see your rate and total before you commit. Link your bank in business hours and you have a decision in <span data-cfg="DECISION_PROMISE_MINUTES">10</span> minutes, or the <span data-cfg="FEE_WAIVER_AMOUNT">$400</span> fee is waived.</p></li>
     <li class="step"><span class="step__num" aria-hidden="true">2</span><h3 class="step__title">Choose your repayments</h3><p class="step__text">Pick 3 to 12 months. Each repayment is the same. Repay early and pay no early-repayment fee.</p></li>
-    <li class="step"><span class="step__num" aria-hidden="true">3</span><h3 class="step__title">Get your money</h3><p class="step__text">Once approved and signed, <span data-cfg="FUNDS_TIME">we pay it into your bank account once you accept</span>.</p><!-- [PLACEHOLDER: state a time only if measured; else "We pay it into your bank account once you accept."] --></li>
+    <li class="step"><span class="step__num" aria-hidden="true">3</span><h3 class="step__title">Get your money</h3><p class="step__text">Once approved and signed, we pay it into your bank account.</p><!-- [PLACEHOLDER: no funding-time claim; state a time only if Mantis measures it (FUNDS_TIME in config.js)] --></li>
   </ol>
   <div class="cta-row"><a class="btn btn--primary" href="apply.html" data-cta="plan-check-rate" data-testid="cta-plan">Check your rate</a></div>
   <p class="plan__note" data-testid="responsible-lending">Every application is assessed. We check your income, expenses and bank data to confirm you can repay without hardship. Approval is not guaranteed.</p>
@@ -158,12 +176,16 @@
   <summary class="faq__q"><span>Is this a payday loan?</span> <!-- [VERIFY] counsel: wording flagged by StoryBrand review --><svg class="faq__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5"/></svg></summary>
   <div class="faq__a"><p>It is a personal loan of $2,001 to $5,000 over 3 to 12 months, with equal repayments. You repay it with interest and fees. It is not an advance on your next pay.</p></div><!-- [VERIFY: counsel before any flat "No"] -->
 </details>
+<details class="faq__item" data-testid="faq-item">
+  <summary class="faq__q"><span>What if my decision takes longer than <span data-cfg="DECISION_PROMISE_MINUTES">10</span> minutes?</span><svg class="faq__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5"/></svg></summary>
+  <div class="faq__a"><p>Then the establishment fee is waived. The clock starts when your bank link completes, in business hours. It is a decision we promise, not an approval. Every application is assessed.</p></div><!-- [VERIFY: counsel] [OPS: measure first] -->
+</details>
   <p class="faq-more"><a class="link-more" href="faq.html">See all questions</a></p>
 </div></section>
 
 <section class="cta-band" data-testid="cta-band"><div class="container">
   <h2>See your total before you decide</h2>
-  <p>Do not let the price of a bad week choose for you. It takes about <span data-cfg="APPLY_MINUTES">5</span> minutes. You can stop at any step. <!-- [PLACEHOLDER: measure the minutes] --></p>
+  <p>Do not let the price of a bad week choose for you. It takes about <span data-cfg="APPLY_MINUTES">5</span> minutes. You can stop at any step. <span data-cfg="LAUNCH_CAP_NOTE">We are funding a limited number of loans a month during launch.</span> <!-- [PLACEHOLDER: measure the minutes] --></p>
   <a class="btn btn--primary" href="apply.html" data-cta="closing" data-testid="cta-closing">Check your rate</a>
 </div></section>
 </main>

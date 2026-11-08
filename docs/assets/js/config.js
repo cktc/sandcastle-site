@@ -19,12 +19,15 @@
     termMax: 12,
     rateMin: 20,                // % p.a.
     rateMax: 48,
-    rateRep: 36,                // representative rate, % p.a.
-    feeUnder3000: 0,            // establishment fee, loans under feeThreshold. PLACEHOLDER (cap mechanics: open item 3)
-    feeOver3000: 200,           // establishment fee, loans of feeThreshold or more. PLACEHOLDER
+    // Pricing decision 8 Nov 2026: 48% plus $400 MACC maximum, see reports/Grand slam offer canvas 1.md
+    rateRep: 48,                // representative rate, % p.a.
+    feeUnder3000: 400,          // establishment fee, loans under feeThreshold. PLACEHOLDER (cap mechanics: open item 3)
+    feeOver3000: 400,           // establishment fee, loans of feeThreshold or more. PLACEHOLDER
     feeThreshold: 3000,
     exampleAmount: 3100,        // worked example (spec s 2)
-    exampleMonths: 12
+    exampleMonths: 12,
+    exampleSmallAmount: 2001,   // second worked example: a small, short loan (offer canvas s 7)
+    exampleSmallMonths: 3
   };
 
   /* ---------- Loan maths. Shared with forms.js (window.RATE_CALC); never hard-code example figures ---------- */
@@ -47,8 +50,20 @@
              cost: Math.round((total - amount) * 100) / 100,
              comparison: Math.round(lo * 12 * 10000) / 100 };
   }
+  // Early exit: amortise the loan month by month at the monthly rate and return what is saved by
+  // paying out the balance after `afterMonths` payments instead of making the remaining repayments.
+  // Saving = remaining repayments less the balance outstanding after the payout month's repayment.
+  function earlyExitSaving(amount, months, afterMonths) {
+    var c = calc(amount, months), i = CARD.rateRep / 100 / 12, bal = c.amount + c.fee;
+    for (var m = 0; m < afterMonths; m++) bal = bal * (1 + i) - c.monthly;
+    var remaining = c.monthly * (months - afterMonths);
+    return Math.round((remaining - bal) * 100) / 100;
+  }
   var money = function (n) { return '$' + n.toLocaleString('en-AU', { minimumFractionDigits: n % 1 ? 2 : 0, maximumFractionDigits: 2 }); };
   var ex = calc(CARD.exampleAmount, CARD.exampleMonths);
+  var exs = calc(CARD.exampleSmallAmount, CARD.exampleSmallMonths);
+  var exitMonth = Math.floor(CARD.exampleMonths / 2);
+  var exitSaving = earlyExitSaving(CARD.exampleAmount, CARD.exampleMonths, exitMonth);
 
   window.RATE_CARD = Object.freeze(CARD);
   window.RATE_CALC = calc;
@@ -84,7 +99,7 @@
     /* ---------- Rate card (display strings built from CARD above) ---------- */
     RATE_MIN: CARD.rateMin + '%',                    // PLACEHOLDER 20%
     RATE_MAX: CARD.rateMax + '%',                    // PLACEHOLDER 48%
-    RATE_REP: CARD.rateRep.toFixed(2) + '%',         // PLACEHOLDER representative rate 36.00%
+    RATE_REP: CARD.rateRep.toFixed(2) + '%',         // representative rate 48.00% (pricing decision 8 Nov 2026)
     ESTAB_FEE_UNDER_3000: money(CARD.feeUnder3000),  // PLACEHOLDER
     ESTAB_FEE_OVER_3000: money(CARD.feeOver3000),    // PLACEHOLDER
     LATE_FEE: '[$ amount, or None]',                 // PLACEHOLDER: only a fee Mantis will charge (spec s 2)
@@ -100,9 +115,30 @@
     EXAMPLE_COST: money(ex.cost),
     COMPARISON_RATE_EXAMPLE: ex.comparison.toFixed(2) + '%',
 
+    /* ---------- Second worked example: small, short loan ---------- */
+    EXAMPLE_SMALL_AMOUNT: money(exs.amount),
+    EXAMPLE_SMALL_TERM: exs.months + ' months',
+    EXAMPLE_SMALL_MONTHLY: money(exs.monthly),
+    EXAMPLE_SMALL_TOTAL: money(exs.total),
+    EXAMPLE_SMALL_COST: money(exs.cost),
+    COMPARISON_RATE_SMALL: exs.comparison.toFixed(2) + '%',
+
+    /* ---------- Early exit saving (main example paid out at the halfway month) ---------- */
+    EARLY_EXIT_MONTH: String(exitMonth),
+    EARLY_EXIT_SAVING: money(Math.round(exitSaving)),   // whole dollars: the page says "about"
+
+    /* ---------- Offer stack (8 Nov 2026, reports/Grand slam offer canvas 1.md) ---------- */
+    DECISION_PROMISE_MINUTES: '10',                  // PLACEHOLDER: OPS must measure before launch (RG 234 substantiation)
+    FEE_WAIVER_AMOUNT: money(CARD.feeOver3000),      // the establishment fee waived on a missed decision
+    CHANGE_OF_MIND_HOURS: '48',                      // counsel: against early-termination terms (offer s 10 item 2)
+    FREE_DATE_MOVES: 'one',                          // a year; must be a contract term (offer s 10 item 4)
+    GOOD_PAYER_REPAYMENTS: 'six',                    // counsel: inducement to re-borrow (offer s 10 item 3)
+    LAUNCH_CAP_NOTE: 'We are funding a limited number of loans a month during launch.', // the only scarcity line allowed; true per the pilot cap
+
     /* ---------- Timing claims. PLACEHOLDER: state a time only if Mantis has measured it (spec s 4) ---------- */
     FUNDS_TIME: 'we pay it into your bank account once you accept',
-    DECISION_TIME: 'You get a decision once we have assessed your application',
+    // PLACEHOLDER: OPS must measure the decision time before launch; do not state a time until measured.
+    DECISION_TIME: 'You get a decision within 10 minutes of linking your bank, in business hours',
     APPLY_MINUTES: '5',                              // PLACEHOLDER: measure before launch
 
     /* ---------- Forms and tracking ---------- */
