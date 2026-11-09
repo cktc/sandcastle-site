@@ -61,6 +61,8 @@ def resolve(page, ref):
     if u.scheme or ref.startswith('{'): return None
     target = unquote(u.path)
     if target == '': return (os.path.join(DOCS, page), u.fragment)
+    # GitHub Pages serves this project at /sandcastle-site/, so root-absolute links carry that prefix (used by 404.html).
+    if target.startswith('/sandcastle-site/'): target = target[len('/sandcastle-site'):]
     base = DOCS if target.startswith('/') else os.path.dirname(os.path.join(DOCS, page))
     f = os.path.normpath(os.path.join(base, target.lstrip('/') if target.startswith('/') else target))
     if os.path.isdir(f): f = os.path.join(f, 'index.html')
