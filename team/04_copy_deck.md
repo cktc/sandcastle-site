@@ -444,7 +444,7 @@ Added after the site was built, so it takes the letter F: section E above is the
 
 **Two promises** (home, block `data-testid="promises"`; repeated in how-it-works step 1, FAQ and apply step 1)
 
-1. **The 10-minute decision.** "Link your bank in business hours and you have a decision in 10 minutes, or the $400 establishment fee is waived." Always with "A decision, not an approval." or "Approval is not guaranteed." beside it.
+1. **The 10-minute decision.** "Link your bank in business hours and you have a decision in 10 minutes, or the establishment fee is waived." (Section H: the fee is $250 or $400 by loan size.) Always with "A decision, not an approval." or "Approval is not guaranteed." beside it.
 2. **48 hours to change your mind.** "Repay the money within two days of it landing and you owe nothing."
 
 **Four included extras** (home, `data-testid="extras"`)
@@ -463,21 +463,21 @@ Added after the site was built, so it takes the letter F: section E above is the
 | Token | Value | Note |
 |---|---|---|
 | `DECISION_PROMISE_MINUTES` | 10 | OPS: measure before launch (RG 234) |
-| `FEE_WAIVER_AMOUNT` | $400 | From the card |
+| `FEE_WAIVER_AMOUNT` | $400 (removed in section H) | From the card |
 | `CHANGE_OF_MIND_HOURS` | 48 | Counsel |
 | `FREE_DATE_MOVES` | one | Contract term |
 | `GOOD_PAYER_REPAYMENTS` | six | Counsel |
 | `LAUNCH_CAP_NOTE` | the scarcity line | Must stay true |
 | `EARLY_EXIT_MONTH`, `EARLY_EXIT_SAVING` | 6, $283 | Computed from the card |
-| `EXAMPLE_SMALL_AMOUNT`, `_TERM`, `_MONTHLY`, `_TOTAL`, `_COST` | $2,001, 3 months, $865.20, $2,595.60, $594.60 | Rates page |
-| `COMPARISON_RATE_SMALL` | 170.74% | Warning directly under it |
+| `EXAMPLE_SMALL_AMOUNT`, `_TERM`, `_MONTHLY`, `_TOTAL`, `_COST` | $2,001, 6 months, $429.41, $2,576.46, $575.46 | Rates page (section H) |
+| `COMPARISON_RATE_SMALL` | 92.85% | Warning directly under it (section H) |
 | `DECISION_TIME` | "You get a decision within 10 minutes of linking your bank, in business hours" | Changed |
-| `RATE_REP`, `EXAMPLE_*`, `COMPARISON_RATE_EXAMPLE` | 48.00%, $372.93 a month, $4,475.16 total, 73.87% | Recomputed |
+| `RATE_REP`, `EXAMPLE_*`, `COMPARISON_RATE_EXAMPLE` | 48.00%, $264.63 a month, $4,763.34 total, 59.67% | Recomputed (section H) |
 
 
 ## G. Positioning pass (April Dunford method, 9 Nov 2026)
 
-Frame chosen: big fish in a small pond, a sub-category of personal loans for people whose pay does not arrive in neat fortnights, judged against Cashies, Wallet Wizard and Beforepay's loan rather than against banks. Home page changes: hero now leads with the category and the 10-minute guarantee ("A personal loan for pay that changes week to week" / decision in 10 minutes or the $400 fee is waived, "A decision, not an approval"); the stakes section opens with the insight (lenders judge the shape of pay, not capacity) before the bill; "known total" moves from headline to proof (cost card and callout unchanged); the trust-row title "Licensed credit provider" becomes "Who stands behind it". Meta title and description updated to match. Not unique and no longer led with: "known total" (required of every medium-loan lender) and "bank data" (standard since 2016). Proof still missing: measured decision times, guarantees honoured, reviews. Counsel flags: the guarantee wording in the hero; the competitor-limit line in the insight.
+Frame chosen: big fish in a small pond, a sub-category of personal loans for people whose pay does not arrive in neat fortnights, judged against Cashies, Wallet Wizard and Beforepay's loan rather than against banks. Home page changes: hero now leads with the category and the 10-minute guarantee ("A personal loan for pay that changes week to week" / decision in 10 minutes or the establishment fee is waived, "A decision, not an approval"); the stakes section opens with the insight (lenders judge the shape of pay, not capacity) before the bill; "known total" moves from headline to proof (cost card and callout unchanged); the trust-row title "Licensed credit provider" becomes "Who stands behind it". Meta title and description updated to match. Not unique and no longer led with: "known total" (required of every medium-loan lender) and "bank data" (standard since 2016). Proof still missing: measured decision times, guarantees honoured, reviews. Counsel flags: the guarantee wording in the hero; the competitor-limit line in the insight.
 
 
 ## H. Board changes 9 Nov 2026
@@ -505,6 +505,6 @@ Early exit: clearing the $3,100 example at month 9 saves about $414.
 | `FEE_WAIVER_AMOUNT` | Removed. The fee is $250 or $400 by loan size, so copy says "the establishment fee is waived" with no figure |
 | `EXAMPLE_*`, `COMPARISON_RATE_*`, `EARLY_EXIT_*` | Recomputed |
 
-**Term copy.** Every "3 to 12 months" is now "6 to 18 months" (meta descriptions, hero, steps, FAQ and its JSON-LD, TMD, rates, how it works, manifest). Ad lines P4 and P5 above that say "up to 18 months" must read "up to 18 months" before any ad is built.
+**Term copy.** Every "3 to 12 months" is now "6 to 18 months" (meta descriptions, hero, steps, FAQ and its JSON-LD, TMD, rates, how it works, manifest). Ad lines P4 and P5 above already say "up to 18 months"; no ad change is needed.
 
 **Prototype banner (every page).** "Concept prototype. Sandcastle is a working name and does not offer credit. No application is submitted." Reason: a third party holds the SANDCASTLE FINANCE trade mark and this is a public concept site. All pages also carry `noindex, nofollow` and `robots.txt` disallows everything. Positioning is unchanged: the hero stays "A personal loan for pay that changes week to week."
