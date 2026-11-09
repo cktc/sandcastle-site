@@ -23,7 +23,7 @@ Above the fold also carries two near-duplicate disclosure paragraphs ("Approval 
 | Stakes | Yes | Late | Medium | "The price of a bad week" / "Without the total, you can sign for a price you only learn later." |
 | Value stack | Yes | Yes | Strong | "You see the total in dollars before you apply." / "If we say no, we tell you why." |
 | Guide: empathy | Yes | Yes | Medium | "We know a surprise bill is stressful" (heading opens with "We"); body "You did not plan for this and should not be rushed." is good. |
-| Guide: authority | Yes | Yes | Medium | "Fernbank is a loan from Mantis, an Australian credit licensee ... AFCA covers complaints." Placeholders only; no proof beyond the licence. Fine, since no reviews exist. |
+| Guide: authority | Yes | Yes | Medium | "Sandcastle is a loan from Mantis, an Australian credit licensee ... AFCA covers complaints." Placeholders only; no proof beyond the licence. Fine, since no reviews exist. |
 | Plan, three steps | Yes | Yes | Strong | "Check your rate / Choose your repayments / Get your money" |
 | Explanatory paragraph | Yes | Yes | Medium | Collapsed under "Read more". Right place, weak label. |
 | Mid-page CTA | **No** | n/a | Gap | Nothing between the hero and the close except the nav button. The plan has no button under it. |
@@ -32,7 +32,7 @@ Above the fold also carries two near-duplicate disclosure paragraphs ("Approval 
 
 ## 3. SB7 check
 
-- **Customer as hero.** About 72 sentences on the home page body, about 36 with "you/your", 14 with "we/our/Fernbank/Mantis" (5 with no "you"). Pass. The only "We" lead is the guide heading.
+- **Customer as hero.** About 72 sentences on the home page body, about 36 with "you/your", 14 with "we/our/Sandcastle/Mantis" (5 with no "you"). Pass. The only "We" lead is the guide heading.
 - **Villain.** "The price of a bad week" appears twice on the home page (stakes heading and closing) and nowhere else. Other pages say "a big bill" (about) or nothing. Never a competitor, but the FAQ question "Is this a payday loan?" names a rival category, and "Will you cut my limit?" borrows pay-advance language that a personal-loan visitor will not recognise. Partial.
 - **Three problems.** External: "The car fails its roadworthy ... The bond ... is due". Internal: "That leaves you worried about the fine print and about the next payment." Philosophical: "A loan should show its full cost before you sign." All present, home page only. The internal problem is absent from how-it-works, rates and eligibility.
 - **Plan.** Names match on home and how-it-works. Descriptions drift: home step 1 "Answer a few questions", how-it-works "Answer four quick questions", apply "Four short steps". Visitors meet "three steps", then "four". Thank-you "What happens next" is a different three (call, ID, decision).

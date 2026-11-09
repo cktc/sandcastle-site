@@ -1,6 +1,6 @@
 {
-  "name": "Fernbank",
-  "short_name": "Fernbank",
+  "name": "Sandcastle",
+  "short_name": "Sandcastle",
   "description": "Personal loans of $2,001 to $5,000. See the total you repay before you apply. Placeholder brand: change with the brand in config.js.",
   "start_url": "./",
   "display": "browser",

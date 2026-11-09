@@ -1,4 +1,4 @@
-/* Fernbank design tokens and base styles. Brand name is a placeholder: it appears only in HTML/JS config, never here.
+/* Sandcastle design tokens and base styles. Brand name is a placeholder: it appears only in HTML/JS config, never here.
    Fonts are loaded by <link> in each page head (see team/02_design_system.md), not @import, to avoid a render-blocking chain.
    Component layout lives in a second file (components.css). */
 

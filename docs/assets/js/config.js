@@ -1,6 +1,6 @@
 /* Single source of truth for brand, legal, rate-card and tracking settings.
  * Pages read these through window.SITE_CONFIG; swap the brand or any value here and nowhere else.
- * Static HTML cannot read this file, so text such as <span data-cfg="BRAND_NAME">Fernbank</span> is
+ * Static HTML cannot read this file, so text such as <span data-cfg="BRAND_NAME">Sandcastle</span> is
  * filled at load (analytics.js). The span's own text is the same placeholder, so the page reads
  * correctly with JS off. <title>, meta tags and JSON-LD cannot be filled by JS: change those by
  * find and replace (see README).
@@ -71,7 +71,7 @@
 
   window.SITE_CONFIG = Object.freeze({
     /* ---------- Brand and legal ---------- */
-    BRAND_NAME: 'Fernbank',                          // working title; also in <title>/meta by find and replace
+    BRAND_NAME: 'Sandcastle',                          // working title; also in <title>/meta by find and replace
     LEGAL_ENTITY: 'Mantis Pty Ltd (placeholder)',    // as on the ASIC/ACL register
     ACL_NUMBER: '000000',                            // PLACEHOLDER, digits only (open item 1)
     ABN: '00 000 000 000',                           // PLACEHOLDER (open item 1)

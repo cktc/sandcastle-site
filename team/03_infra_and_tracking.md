@@ -51,8 +51,8 @@ Notes:
 
 ```html
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FinancialService","name":"Fernbank",
- "legalName":"Fernbank Pty Ltd","url":"https://www.example.com.au/",
+{"@context":"https://schema.org","@type":"FinancialService","name":"Sandcastle",
+ "legalName":"Sandcastle Pty Ltd","url":"https://www.example.com.au/",
  "email":"hello@example.com.au","telephone":"+61-1300-000-000",
  "areaServed":"AU","description":"Personal loans for Australians. Australian Credit Licence 000000."}
 </script>

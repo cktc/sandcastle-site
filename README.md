@@ -1,4 +1,4 @@
-# Fernbank site (placeholder brand)
+# Sandcastle site (placeholder brand)
 
 Static marketing and application site. Plain HTML, CSS and vanilla JS. No framework, no build step. Served by GitHub Pages from `/docs` on `main`.
 
@@ -96,7 +96,7 @@ Copied from `team/06_qa_compliance.md` section 6, plus the open counsel and copy
 - [ ] The `action` on the apply `<form>` (`https://formspree.io/f/PLACEHOLDER`) matches `FORM_ENDPOINT` in `config.js`. It is the target for a no-JS native post.
 - [ ] Domain live, HTTPS enforced, `CNAME` committed, canonical host chosen.
 - [ ] Find and replace `https://example.github.io/REPO/` (the placeholder base, with trailing slash) in every canonical, `og:url`, JSON-LD, `sitemap.xml` and `robots.txt`.
-- [ ] Find and replace the brand `Fernbank` in every `<title>`, meta description, `og:` tag and JSON-LD block, and in `site.webmanifest` (JS cannot reach these; crawlers need the literal name). Also replace placeholder contact values in the JSON-LD on `index.html` and `faq.html`.
+- [ ] Find and replace the brand `Sandcastle` in every `<title>`, meta description, `og:` tag and JSON-LD block, and in `site.webmanifest` (JS cannot reach these; crawlers need the literal name). Also replace placeholder contact values in the JSON-LD on `index.html` and `faq.html`.
 - [ ] If the form service is not Formspree, change `https://formspree.io` in the CSP `<meta>` of every page.
 - [ ] Consent banner calls `Consent.set(true|false)`; with `CONSENT_REQUIRED` true, nothing loads before accept (check the Network tab).
 - [ ] Test the funnel with `?debug=1&utm_source=meta&utm_campaign=test&fbclid=x`: events fire in order, hidden fields carry UTMs into the form submission.

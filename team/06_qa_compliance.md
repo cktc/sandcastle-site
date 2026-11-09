@@ -1,4 +1,4 @@
-# QA and compliance review: Fernbank site
+# QA and compliance review: Sandcastle site
 
 Credit-compliance and copy QA, 8 Nov 2026. HTML read only, no browser. Checked against `01_site_spec.md`, `04_copy_deck.md`, the panel verdict and the regulator and advocate notes. Paths are under `site/docs/`.
 
@@ -24,7 +24,7 @@ The copy follows the deck closely. No prohibited claim appears, the rate-card fi
 | Med | credit-guide | 49-58 | Builder-written pointer page, not a credit guide; no download. | Open, Mantis |
 | Low | privacy | 55, 59-66 | Consent callout links "Privacy Policy" to its own page. Policy body is invented framing with visible "[Mantis legal ...]" brackets. | Open, counsel |
 | Low | index | 123 | Bold trust-row title "Licensed credit provider". Panel: licence belongs in the footer. Deck-approved. | Acceptable, watch |
-| Low | about | 7, 12 | Meta says "the licensed lender behind Fernbank". Deck wording, not a headline. | Acceptable, watch |
+| Low | about | 7, 12 | Meta says "the licensed lender behind Sandcastle". Deck wording, not a headline. | Acceptable, watch |
 | Low | 404 | 50-52 | Absolute links break on a GitHub Pages project path. | Open, builder |
 | Fixed | apply | 71 | Radio `term-3` had `data-error=&quot;...&quot;`, a malformed attribute. Now a valid `data-error="Choose a term between 3 and 12 months."` | Fixed |
 
@@ -102,7 +102,7 @@ Everything else, including titles and meta descriptions, matches the deck.
 13. Provider "Basiq (placeholder)" (apply, privacy, FAQ).
 14. Credit guide, TMD and privacy are frames; "[Mantis legal ...]" and "will be linked here as a PDF" show.
 15. Unmeasured "about 5 minutes".
-16. Brand "Fernbank" (no trademark check); `example.github.io/REPO` in canonical, sitemap and CNAME.
+16. Brand "Sandcastle" (no trademark check); `example.github.io/REPO` in canonical, sitemap and CNAME.
 17. `FORM_ENDPOINT` and tracking IDs are blank: submit shows the error and sends nothing.
 
 ## 7. Meta ad policy

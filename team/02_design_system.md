@@ -1,6 +1,6 @@
-# Fernbank design system
+# Sandcastle design system
 
-"Fernbank" is a placeholder. The name lives in one place: a `BRAND` constant in the page build (or `<meta name="brand">`), and in the wordmark text node. CSS never contains it. Tokens are in `docs/assets/css/tokens.css`; components go in `components.css`.
+"Sandcastle" is a placeholder. The name lives in one place: a `BRAND` constant in the page build (or `<meta name="brand">`), and in the wordmark text node. CSS never contains it. Tokens are in `docs/assets/css/tokens.css`; components go in `components.css`.
 
 ## 1. Direction
 
@@ -133,7 +133,7 @@ Native `<details class="faq__item"><summary class="faq__q">`. `.faq__item` has a
 ## 6. Logo
 
 Text wordmark, no image files. `a.wordmark` = inline SVG mark + the word.
-- Text: "Fernbank", **Source Serif 4, 700**, `font-size: 1.5rem`, `letter-spacing: -0.02em`, `line-height: 1`, colour `--text`. The mark and the text sit on one baseline with an 8px gap.
+- Text: "Sandcastle", **Source Serif 4, 700**, `font-size: 1.5rem`, `letter-spacing: -0.02em`, `line-height: 1`, colour `--text`. The mark and the text sit on one baseline with an 8px gap.
 - Mark: 28px square, `viewBox="0 0 28 28"`, `fill: var(--accent)`, rounded 6px. Inside it, in `--accent-ink`, a stylised frond drawn as three rising chevrons that also read as a repayment staircase: `M7 20l7-5 7 5` , `M7 15l7-5 7 5`, `M7 10l7-5 7 5`, stroke 2.5, round caps and joins, no fill, with the top one at full strength and the lower two at 0.6 and 0.35 opacity. `aria-hidden="true"`; the wordmark link carries the name.
 - Minimum size: mark 20px, wordmark 1.25rem. Single-colour use: `currentColor` for both.
 

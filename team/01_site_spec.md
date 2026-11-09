@@ -1,4 +1,4 @@
-# Site specification: Fernbank personal loan (working title)
+# Site specification: Sandcastle personal loan (working title)
 
 Draft for copywriter, designer and builder, 8 Nov 2026. Brand name in one config token (`BRAND_NAME`; no trademark check done). Entity: Mantis, ACL 000000 (PLACEHOLDER). Static HTML on GitHub Pages.
 
@@ -149,6 +149,6 @@ Conversions API: a static site cannot send server events, so keep a documented `
 8. Set the pricing committee's rate card: representative rate, fees, default and dishonour fees, repayment frequency.
 9. Pick the bank-data provider and confirm its consent wording and accreditation.
 10. Choose the form service and callback process, with a named staffer and a response-time promise that Mantis can keep.
-11. Run a trademark check on "Fernbank" and secure domain, Meta and Google accounts.
+11. Run a trademark check on "Sandcastle" and secure domain, Meta and Google accounts.
 12. Decide whether to publish arrears, hardship and refinancing rates (advocate asked).
 13. Counsel to review the whole site before launch, in particular the (verify with counsel) items above.
