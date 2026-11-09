@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Replace https://example.github.io/REPO/ with the live address (with a trailing slash) and update <lastmod> at launch.
+<!-- Replace https://cktc.github.io/sandcastle-site/ with the live address (with a trailing slash) and update <lastmod> at launch.
      Keep this list in step with the pages that exist. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://example.github.io/REPO/</loc><lastmod>2026-11-08</lastmod><priority>1.0</priority></url>
-  <url><loc>https://example.github.io/REPO/how-it-works.html</loc><lastmod>2026-11-08</lastmod></url>
-  <url><loc>https://example.github.io/REPO/rates.html</loc><lastmod>2026-11-08</lastmod></url>
-  <url><loc>https://example.github.io/REPO/eligibility.html</loc><lastmod>2026-11-08</lastmod></url>
-  <url><loc>https://example.github.io/REPO/faq.html</loc><lastmod>2026-11-08</lastmod></url>
-  <url><loc>https://example.github.io/REPO/hardship.html</loc><lastmod>2026-11-08</lastmod></url>
-  <url><loc>https://example.github.io/REPO/about.html</loc><lastmod>2026-11-08</lastmod></url>
-  <url><loc>https://example.github.io/REPO/privacy.html</loc><lastmod>2026-11-08</lastmod></url>
-  <url><loc>https://example.github.io/REPO/credit-guide.html</loc><lastmod>2026-11-08</lastmod></url>
-  <url><loc>https://example.github.io/REPO/tmd.html</loc><lastmod>2026-11-08</lastmod></url>
-  <url><loc>https://example.github.io/REPO/apply.html</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://cktc.github.io/sandcastle-site/</loc><lastmod>2026-11-08</lastmod><priority>1.0</priority></url>
+  <url><loc>https://cktc.github.io/sandcastle-site/how-it-works.html</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://cktc.github.io/sandcastle-site/rates.html</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://cktc.github.io/sandcastle-site/eligibility.html</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://cktc.github.io/sandcastle-site/faq.html</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://cktc.github.io/sandcastle-site/hardship.html</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://cktc.github.io/sandcastle-site/about.html</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://cktc.github.io/sandcastle-site/privacy.html</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://cktc.github.io/sandcastle-site/credit-guide.html</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://cktc.github.io/sandcastle-site/tmd.html</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://cktc.github.io/sandcastle-site/apply.html</loc><lastmod>2026-11-08</lastmod></url>
   <!-- thank-you.html and 404.html are deliberately NOT listed: both carry <meta name="robots" content="noindex">.
        thank-you.html is a conversion page only; listing it would invite organic visits that fire no real conversion. -->
 </urlset>
