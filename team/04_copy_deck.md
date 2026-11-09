@@ -473,3 +473,8 @@ Added after the site was built, so it takes the letter F: section E above is the
 | `COMPARISON_RATE_SMALL` | 170.74% | Warning directly under it |
 | `DECISION_TIME` | "You get a decision within 10 minutes of linking your bank, in business hours" | Changed |
 | `RATE_REP`, `EXAMPLE_*`, `COMPARISON_RATE_EXAMPLE` | 48.00%, $372.93 a month, $4,475.16 total, 73.87% | Recomputed |
+
+
+## G. Positioning pass (April Dunford method, 9 Nov 2026)
+
+Frame chosen: big fish in a small pond, a sub-category of personal loans for people whose pay does not arrive in neat fortnights, judged against Cashies, Wallet Wizard and Beforepay's loan rather than against banks. Home page changes: hero now leads with the category and the 10-minute guarantee ("A personal loan for pay that changes week to week" / decision in 10 minutes or the $400 fee is waived, "A decision, not an approval"); the stakes section opens with the insight (lenders judge the shape of pay, not capacity) before the bill; "known total" moves from headline to proof (cost card and callout unchanged); the trust-row title "Licensed credit provider" becomes "Who stands behind it". Meta title and description updated to match. Not unique and no longer led with: "known total" (required of every medium-loan lender) and "bank data" (standard since 2016). Proof still missing: measured decision times, guarantees honoured, reviews. Counsel flags: the guarantee wording in the hero; the competitor-limit line in the insight.

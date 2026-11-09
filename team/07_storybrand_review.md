@@ -84,3 +84,8 @@ Above the fold also carries two near-duplicate disclosure paragraphs ("Approval 
 ## 7. Verdict
 
 Don Miller would say this page is clean and honest: the customer is the hero, the villain and the three steps are on the page, and a caveman would get it. But it asks the visitor to do two different things by two different names, it buries the story under the numbers, and it never quite pictures the good day after. Fix the button words first, then move the price table below the plan.
+
+
+## Addendum, 9 Nov 2026: positioning layer
+
+A Dunford pass sits on top of this review. StoryBrand supplied the story; the frame was missing. The hero now names the category and the one differentiator nobody else offers, and the "known total" line that led the page is demoted to proof because every rival can claim it. The SB7 structure is intact: character (person with variable pay), problem (judged on pay shape), guide (we read your earnings), plan (three steps), call to action (Check your rate), success (one bill with an end date), failure (the price you learn later).
