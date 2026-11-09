@@ -25,7 +25,7 @@
  *      elig_bank, consent_bank_data, full_name, email, mobile, preferred_time, contact_consent.
  *      The old dob, residency, income_source, income_amount, centrelink_share and consent_credit
  *      fields are gone: the spec asks four tick-box questions, not a date of birth or income.
- *   2. RULES: amount $2,001 to $5,000 (was $300 to $5,000), term 3 to 12 months, and the spec's
+ *   2. RULES: amount $2,001 to $5,000 (was $300 to $5,000), term 6 to 18 months, and the spec's
  *      Centrelink rule and income floor (see RULES).
  *   3. Eligibility fails if any of the four statements is unticked, with the statement's own words
  *      shown as the reason (data-fail-reason on each checkbox).
@@ -47,8 +47,8 @@
     loanMin: CARD.amountMin,        // $2,001: a $2,000 loan would be a SACC (spec s 0)
     loanMax: CARD.amountMax,        // $5,000
     loanStep: 100,                  // slider step; the number box accepts any whole dollar in range
-    termMin: CARD.termMin,          // 3 months
-    termMax: CARD.termMax,          // 12 months
+    termMin: CARD.termMin,          // 6 months
+    termMax: CARD.termMax,          // 18 months
     minAge: 18,                     // elig_age statement
     // Centrelink (spec s 5, open item 5): government payments are extra income only and cannot be
     // the only income. The form does not ask for an income split, so the rule is enforced by the

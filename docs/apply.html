@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
   <title>Check your rate | Sandcastle</title>
   <meta name="description" content="Tell us the amount and term, answer four quick questions and request a call. Every application is assessed.">
   <link rel="canonical" href="https://cktc.github.io/sandcastle-site/apply.html">
@@ -24,6 +25,7 @@
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
+<div class="proto-banner" role="note" data-testid="prototype-banner"><div class="container"><p>Concept prototype. Sandcastle is a working name and does not offer credit. No application is submitted.</p></div></div>
 <header class="site-header">
   <div class="container site-header__inner">
     <a class="wordmark" href="index.html" data-testid="wordmark"><svg class="wordmark__mark" viewBox="0 0 28 28" aria-hidden="true"><path d="M5 20C5 11 10 5 19 5c0 9-5 15-14 15z"/><path d="M11 24c0-7 4-11 12-11 0 7-4 11-12 11z"/></svg><span data-cfg="BRAND_NAME">Sandcastle</span></a>
@@ -70,8 +72,8 @@
     </div>
     <fieldset class="field" aria-describedby="term-hint err-term_months">
       <legend class="label">How long do you want to repay over?</legend>
-      <div class="radio-grid"><label class="radio-card"><input type="radio" class="visually-hidden" name="term_months" value="3" required data-error="Choose a term between 3 and 12 months." data-testid="term-3"><span class="radio-card__body"><span class="radio-card__title">3 months</span><span class="radio-card__line" data-term-monthly>-</span><span class="radio-card__line" data-term-total>-</span></span></label><label class="radio-card"><input type="radio" class="visually-hidden" name="term_months" value="6" required checked data-testid="term-6"><span class="radio-card__body"><span class="radio-card__title">6 months</span><span class="radio-card__line" data-term-monthly>-</span><span class="radio-card__line" data-term-total>-</span></span></label><label class="radio-card"><input type="radio" class="visually-hidden" name="term_months" value="9" required data-testid="term-9"><span class="radio-card__body"><span class="radio-card__title">9 months</span><span class="radio-card__line" data-term-monthly>-</span><span class="radio-card__line" data-term-total>-</span></span></label><label class="radio-card"><input type="radio" class="visually-hidden" name="term_months" value="12" required data-testid="term-12"><span class="radio-card__body"><span class="radio-card__title">12 months</span><span class="radio-card__line" data-term-monthly>-</span><span class="radio-card__line" data-term-total>-</span></span></label></div>
-      <span class="hint" id="term-hint">3 to 12 months. Longer means smaller repayments and more interest.</span>
+      <div class="radio-grid"><label class="radio-card"><input type="radio" class="visually-hidden" name="term_months" value="6" required checked data-error="Choose a term between 6 and 18 months." data-testid="term-6"><span class="radio-card__body"><span class="radio-card__title">6 months</span><span class="radio-card__line" data-term-monthly>-</span><span class="radio-card__line" data-term-total>-</span></span></label><label class="radio-card"><input type="radio" class="visually-hidden" name="term_months" value="9" required data-testid="term-9"><span class="radio-card__body"><span class="radio-card__title">9 months</span><span class="radio-card__line" data-term-monthly>-</span><span class="radio-card__line" data-term-total>-</span></span></label><label class="radio-card"><input type="radio" class="visually-hidden" name="term_months" value="12" required data-testid="term-12"><span class="radio-card__body"><span class="radio-card__title">12 months</span><span class="radio-card__line" data-term-monthly>-</span><span class="radio-card__line" data-term-total>-</span></span></label><label class="radio-card"><input type="radio" class="visually-hidden" name="term_months" value="18" required data-testid="term-18"><span class="radio-card__body"><span class="radio-card__title">18 months</span><span class="radio-card__line" data-term-monthly>-</span><span class="radio-card__line" data-term-total>-</span></span></label></div>
+      <span class="hint" id="term-hint">6 to 18 months. Longer means smaller repayments and more interest.</span>
       <span class="field-error" id="err-term_months" data-error-for="term_months"></span>
     </fieldset>
     <div class="field">
@@ -94,7 +96,7 @@
 </dl></div>
       <p class="cost-strip__foot">Estimate only. Your rate depends on your assessment.</p>
     </div>
-    <p class="plan__note" data-testid="apply-promise">Link your bank in business hours and you have a decision in <span data-cfg="DECISION_PROMISE_MINUTES">10</span> minutes, or the <span data-cfg="FEE_WAIVER_AMOUNT">$400</span> fee is waived. A decision, not an approval.</p>
+    <p class="plan__note" data-testid="apply-promise">Link your bank in business hours and you have a decision in <span data-cfg="DECISION_PROMISE_MINUTES">10</span> minutes, or the establishment fee is waived. A decision, not an approval.</p>
     <!-- [OPS: measure the time before any public claim; VERIFY: counsel] -->
     <p class="placeholder-note" data-testid="placeholder-note">Illustrative only. Rates and fees are placeholders pending pricing and legal review.</p>
     <p class="warn-text" data-testid="comparison-rate-warning">WARNING: This comparison rate is true only for the example given and may not include all fees and charges. Different terms, fees or other loan amounts might result in a different comparison rate.</p>

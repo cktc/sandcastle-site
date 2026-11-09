@@ -1,7 +1,7 @@
 {
   "name": "Sandcastle",
   "short_name": "Sandcastle",
-  "description": "Personal loans of $2,001 to $5,000. See the total you repay before you apply. Placeholder brand: change with the brand in config.js.",
+  "description": "Personal loans of $2,001 to $5,000 over 6 to 18 months. See the total you repay before you apply. Placeholder brand: change with the brand in config.js.",
   "start_url": "./",
   "display": "browser",
   "background_color": "#F2F5F3",

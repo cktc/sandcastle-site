@@ -146,3 +146,17 @@ From `reports/Grand slam offer canvas 1.md` section 10.
 5. Comparison rates above 48% with a $400 fee, and the small-short-loan rows in particular.
 6. Whether a soft enquiry is available; if not, remove every "will not affect your credit score" line.
 7. Operations must hold the 10-minute clock in business hours, including the manual-review lane, and log every miss so the waiver is paid without the customer asking.
+
+
+## Board changes (9 Nov 2026)
+
+Rate card now 48% p.a., 6 to 18 months, establishment fee $250 under $3,500 and $400 from $3,500. Figures below are computed by `config.js`.
+
+| # | Finding | Where | Severity | Action |
+|---|---|---|---|---|
+| B1 | New comparison rates: 59.67% on $3,100 over 18 months (fee $250), 92.85% on $2,001 over 6 months (fee $250). Both exceed the 48% rate. Standing warning sits under each | index, rates | High | Counsel to confirm the fee sits outside the 48% cap (NCC s 32B) and the comparison-rate method |
+| B2 | A longer term means more total interest: the $3,100 example costs $1,663.34 over 18 months, against $1,375.16 over 12 months under the old card. The apply term cards show total per term | rates, apply | Medium | Advocate (consumer) and counsel review of the term range, the "longer means smaller repayments and more interest" hint, and the target market |
+| B3 | The fee-waiver promise no longer names a dollar amount (fee is $250 or $400) | index, apply, how-it-works, rates | Low | Counsel to check "the establishment fee is waived" against the contract |
+| B4 | Prototype banner on every page, `noindex, nofollow` meta on every page, `robots.txt` disallows all. Banner states the name is a working name and nothing is submitted | all pages, robots.txt | Info | Required while a third party holds the SANDCASTLE FINANCE trade mark. Remove the banner and noindex only at launch, after market brand clearance |
+| B5 | The apply form still posts if `FORM_ENDPOINT` is set, which contradicts "No application is submitted" | apply, config.js | Medium | Keep `FORM_ENDPOINT` blank while the banner shows |
+| B6 | Meta 90-day rule: the 6-month minimum term improves on the old 3-month minimum | README blockers | Low | Counsel still to confirm |

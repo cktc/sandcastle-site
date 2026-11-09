@@ -368,17 +368,17 @@ Credit guide: "Credit guide | {{BRAND}}" / "Our credit guide: who we are, what w
 
 ## D. Meta ad copy
 
-Rules: each ad says it is a loan and 18+; no rates, speed, "no credit check", "guaranteed", "instant", urgency, pay-advance targeting or review claims. Button: **Apply Now** (not "Learn More"). **Flag: Meta bans loans repayable within 90 days.** The term floor is 3 months, so ads say "up to 12 months"; counsel to confirm before launch. `[VERIFY: counsel]` Every primary text ends with: "Credit provided by Mantis, ACL {{ACL_NUMBER}}. Applicants must be 18+. Every application is assessed. Terms and fees apply."
+Rules: each ad says it is a loan and 18+; no rates, speed, "no credit check", "guaranteed", "instant", urgency, pay-advance targeting or review claims. Button: **Apply Now** (not "Learn More"). **Flag: Meta bans loans repayable within 90 days.** The term floor is 3 months, so ads say "up to 18 months"; counsel to confirm before launch. `[VERIFY: counsel]` Every primary text ends with: "Credit provided by Mantis, ACL {{ACL_NUMBER}}. Applicants must be 18+. Every application is assessed. Terms and fees apply."
 
 **Primary texts**
 
 | # | Angle | Primary text |
 |---|---|---|
-| P1 | Car repair | The mechanic's quote just landed. Before you say yes to any loan, see the total you would repay. {{BRAND}} personal loans, $2,001 to $5,000, up to 12 months. 18+. |
+| P1 | Car repair | The mechanic's quote just landed. Before you say yes to any loan, see the total you would repay. {{BRAND}} personal loans, $2,001 to $5,000, up to 18 months. 18+. |
 | P2 | Car repair | Rego, a new clutch, a set of tyres. A loan is a big decision. {{BRAND}} shows you what you repay in total before you apply. Applicants must be 18+. |
 | P3 | Dental | A cracked tooth is a bad week for your budget too. {{BRAND}} personal loans from $2,001 to $5,000. See your total repayment before you apply. 18+. |
-| P4 | Dental | Dental work can cost more than you planned. If you are thinking of a loan, see the whole cost first, with equal repayments over up to 12 months. 18+. |
-| P5 | Rental bond | New place, bond due. Borrow $2,001 to $5,000 over up to 12 months, with the total shown before you apply. 18+. |
+| P4 | Dental | Dental work can cost more than you planned. If you are thinking of a loan, see the whole cost first, with equal repayments over up to 18 months. 18+. |
+| P5 | Rental bond | New place, bond due. Borrow $2,001 to $5,000 over up to 18 months, with the total shown before you apply. 18+. |
 | P6 | Fixed repayment | One loan, equal repayments, a date it ends. {{BRAND}} shows your total repayment first, so you can plan your pay around it. 18+. |
 
 **Headlines (under 40 characters where possible)**
@@ -478,3 +478,33 @@ Added after the site was built, so it takes the letter F: section E above is the
 ## G. Positioning pass (April Dunford method, 9 Nov 2026)
 
 Frame chosen: big fish in a small pond, a sub-category of personal loans for people whose pay does not arrive in neat fortnights, judged against Cashies, Wallet Wizard and Beforepay's loan rather than against banks. Home page changes: hero now leads with the category and the 10-minute guarantee ("A personal loan for pay that changes week to week" / decision in 10 minutes or the $400 fee is waived, "A decision, not an approval"); the stakes section opens with the insight (lenders judge the shape of pay, not capacity) before the bill; "known total" moves from headline to proof (cost card and callout unchanged); the trust-row title "Licensed credit provider" becomes "Who stands behind it". Meta title and description updated to match. Not unique and no longer led with: "known total" (required of every medium-loan lender) and "bank data" (standard since 2016). Proof still missing: measured decision times, guarantees honoured, reviews. Counsel flags: the guarantee wording in the hero; the competitor-limit line in the insight.
+
+
+## H. Board changes 9 Nov 2026
+
+The board changed the product. Sections A to G keep the old figures as history; where they conflict, this section wins. Every figure in the pages comes from `config.js`.
+
+**Rate card.** 48% p.a. Term 6 to 18 months (was 3 to 12). Establishment fee $250 on loans under $3,500, $400 on loans of $3,500 or more (was $400 flat, threshold $3,000). The apply form offers 6, 9, 12 and 18 months; the term error reads "Choose a term between 6 and 18 months."
+
+**Worked examples (computed).**
+
+| Example | Fee | Monthly | Total | Comparison rate |
+|---|---|---|---|---|
+| $3,100 over 18 months | $250 | $264.63 | $4,763.34 | 59.67% |
+| $2,001 over 6 months | $250 | $429.41 | $2,576.46 | 92.85% |
+
+Early exit: clearing the $3,100 example at month 9 saves about $414.
+
+**Token changes**
+
+| Token | Change |
+|---|---|
+| `ESTAB_FEE_UNDER_3000` | Renamed `ESTAB_FEE_UNDER_THRESHOLD`, now $250 |
+| `ESTAB_FEE_OVER_3000` | Renamed `ESTAB_FEE_OVER_THRESHOLD`, $400 |
+| `FEE_THRESHOLD` | New, $3,500 |
+| `FEE_WAIVER_AMOUNT` | Removed. The fee is $250 or $400 by loan size, so copy says "the establishment fee is waived" with no figure |
+| `EXAMPLE_*`, `COMPARISON_RATE_*`, `EARLY_EXIT_*` | Recomputed |
+
+**Term copy.** Every "3 to 12 months" is now "6 to 18 months" (meta descriptions, hero, steps, FAQ and its JSON-LD, TMD, rates, how it works, manifest). Ad lines P4 and P5 above that say "up to 18 months" must read "up to 18 months" before any ad is built.
+
+**Prototype banner (every page).** "Concept prototype. Sandcastle is a working name and does not offer credit. No application is submitted." Reason: a third party holds the SANDCASTLE FINANCE trade mark and this is a public concept site. All pages also carry `noindex, nofollow` and `robots.txt` disallows everything. Positioning is unchanged: the hero stays "A personal loan for pay that changes week to week."

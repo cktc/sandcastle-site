@@ -69,6 +69,8 @@ Pages rebuilds in about a minute. Check Actions, "pages build and deployment", i
 
 Copied from `team/06_qa_compliance.md` section 6, plus the open counsel and copy items. All of these show to customers or affect compliance.
 
+- [ ] Market brand clearance replaces the Sandcastle name. A third party holds the SANDCASTLE FINANCE trade mark; Sandcastle is a working name only. Then find and replace the brand everywhere (see the checklist below).
+- [ ] Remove the prototype banner (`data-testid="prototype-banner"`, `.proto-banner` in `components.css`, on all 13 pages) and the `noindex, nofollow` robots meta, and restore `Allow: /` in `robots.txt`, only at launch. `thank-you.html` keeps its `noindex`.
 - [ ] ACL "000000" (footer, about, apply, credit guide, home).
 - [ ] Entity "Mantis Pty Ltd (placeholder)".
 - [ ] ABN "00 000 000 000".
@@ -82,13 +84,13 @@ Copied from `team/06_qa_compliance.md` section 6, plus the open counsel and copy
 - [ ] Hardship contact "[Name]", complaint reply "[number] business days", callback "[response time]".
 - [ ] Credit guide, TMD and privacy are frames: "[Mantis legal ...]" and "will be linked here as a PDF" show. Link the real PDFs.
 - [ ] Tracking IDs (Meta, Google tag, GA4) and `FORM_ENDPOINT` are blank; the submit shows an error and sends nothing.
-- [ ] Counsel sign-off on the comparison rates shown at 48% plus the $400 fee (73.87% on the $3,100 example, 170.74% on the $2,001 over 3 months example): confirm the MACC establishment fee sits outside the 48% annual cost rate cap (NCC s 32B). Then remove the `.placeholder-note` lines.
+- [ ] Counsel sign-off on the comparison rates shown at 48% plus the establishment fee ($250 under $3,500, $400 from $3,500): 59.67% on the $3,100 over 18 months example, 92.85% on the $2,001 over 6 months example. Confirm the MACC establishment fee sits outside the 48% annual cost rate cap (NCC s 32B). Then remove the `.placeholder-note` lines.
 - [ ] Counsel on the "Check your rate" CTA and "You see your rate" wording against a flat-rate estimate.
 - [ ] Counsel on the FAQ "Will you cut my limit? No." answer.
 - [ ] Measure or cut "about 5 minutes" (`APPLY_MINUTES`).
 - [ ] Measure the 10-minute decision time and the waiver process before any public claim (`DECISION_PROMISE_MINUTES`, `DECISION_TIME`).
 - [ ] Counsel on the 48-hour change of mind and the good-payer rate.
-- [ ] Counsel on the 3-month minimum term against Meta's 90-day rule for loans repayable within 90 days.
+- [ ] Counsel on the 6-month minimum term against Meta's 90-day rule for loans repayable within 90 days. Advocate and counsel review of the 6 to 18 month range (a longer term costs more total interest).
 
 ## Pre-launch checklist
 
@@ -102,7 +104,7 @@ Copied from `team/06_qa_compliance.md` section 6, plus the open counsel and copy
 - [ ] Test the funnel with `?debug=1&utm_source=meta&utm_campaign=test&fbclid=x`: events fire in order, hidden fields carry UTMs into the form submission.
 - [ ] Meta Events Manager (Test Events) and GA4 DebugView show `ViewContent`, `InitiateCheckout`, `Lead`, `CompleteRegistration` / `begin_checkout`, `qualify_lead`, `generate_lead`.
 - [ ] A real submission reaches the form service, emails the team, and lands on `thank-you.html`.
-- [ ] `thank-you.html` has `noindex`; every other page has unique title, description, canonical.
+- [ ] `thank-you.html` has `noindex` (until launch every page has `noindex, nofollow`); every other page has unique title, description, canonical.
 - [ ] 404 page works at a deep URL; Lighthouse mobile above 90 on home and apply; HTML plus CSS under 100KB.
 - [ ] Footer on every page: legal entity, ACL number, credit guide link, hardship link, privacy link.
 - [ ] Privacy policy names Meta, Google and the form service, and says what is collected.
@@ -112,7 +114,7 @@ Copied from `team/06_qa_compliance.md` section 6, plus the open counsel and copy
 
 - **Pages:** `index, how-it-works, rates, eligibility, faq, hardship, about, privacy, credit-guide, tmd, apply, thank-you, 404`. The spec's paths map to these files (`/rates-and-fees` is `rates.html`, `/help` is `hardship.html`, `/target-market` is `tmd.html`). The header, footer and consent banner are repeated in each file, so change them in all 13 (find and replace).
 - **Tokens:** every `{{TOKEN}}` in the copy deck is `<span data-cfg="KEY">placeholder</span>`, filled by `analytics.js` from `config.js`. New keys include `ABN, ADDRESS, PHONE, PHONE_TEL, EMAIL, HOURS, HARDSHIP_CONTACT, COMPLAINT_REPLY_TIME, CALLBACK_TIME, AFCA_*, NDH_*, PROVIDER, RATE_*, ESTAB_FEE_*, LATE_FEE, DISHONOUR_FEE, EXAMPLE_*, COMPARISON_RATE_EXAMPLE, FUNDS_TIME, DECISION_TIME, APPLY_MINUTES`. `CONTACT_EMAIL` and `CONTACT_PHONE` became `EMAIL` and `PHONE`. Links use `data-cfg-href="tel:{PHONE_TEL}"`.
-- **Rate card numbers:** edit the `CARD` object at the top of `config.js`. The worked example, comparison rate and the apply-form estimate are computed from it (`window.RATE_CALC`), never typed. Literal "$2,001 to $5,000" and "3 to 12 months" in the copy are text and must be changed by hand if `CARD` changes.
+- **Rate card numbers:** edit the `CARD` object at the top of `config.js`. The worked example, comparison rate and the apply-form estimate are computed from it (`window.RATE_CALC`), never typed. Literal "$2,001 to $5,000" and "6 to 18 months" in the copy are text and must be changed by hand if `CARD` changes.
 - **Check before every deploy:** `python3 team/check_links.py`.
 - **Tracking names:** spec s 6 names map to `analytics.js` events: `view_apply` is `page_view` on apply, `start_application` is `apply_start`, `submit_application` and `generate_lead` are `apply_submitted`. Added: `consent_given, cta_click, phone_click, faq_expand, rate_card_view, help_page_view`. `eligibility_failed` reasons are now `age, residency, income, bank_account`.
 - **Apply flow:** four steps (loan details, four tick-box eligibility questions, bank-data consent, callback contact). Field names are in the header of `forms.js`. Amount, term and purpose are kept in `sessionStorage`; nothing else is stored.

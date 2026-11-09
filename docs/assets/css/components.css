@@ -237,3 +237,7 @@ input[type="range"] { width: 100%; accent-color: var(--accent); min-height: var(
 
 /* Flags placeholder pricing next to the comparison rate. Remove once pricing and legal sign off. */
 .placeholder-note { display: block; margin-top: var(--space-1); font-size: var(--fs-xs); line-height: 1.5; font-weight: 400; color: var(--text-2); }
+
+/* Prototype banner: site-wide, above the header. Remove with the noindex meta at launch (README, pre-launch blockers). */
+.proto-banner { background: var(--surface-sunk); color: var(--text); border-bottom: 1px solid var(--border-strong); padding-block: var(--space-2); }
+.proto-banner p { margin: 0; font-size: var(--fs-xs); font-weight: 600; line-height: 1.4; }

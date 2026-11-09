@@ -15,25 +15,25 @@
   var CARD = {
     amountMin: 2001,            // $2,001 floor keeps the product out of the SACC regime (spec s 0, open item 2)
     amountMax: 5000,
-    termMin: 3,                 // months
-    termMax: 12,
+    termMin: 6,                 // months
+    termMax: 18,
     rateMin: 20,                // % p.a.
     rateMax: 48,
-    // Pricing decision 8 Nov 2026: 48% plus $400 MACC maximum, see reports/Grand slam offer canvas 1.md
+    // Board decision 9 Nov 2026: 48% p.a., 6 to 18 months, establishment fee $250 under $3,500 and $400 from $3,500
     rateRep: 48,                // representative rate, % p.a.
-    feeUnder3000: 400,          // establishment fee, loans under feeThreshold. PLACEHOLDER (cap mechanics: open item 3)
-    feeOver3000: 400,           // establishment fee, loans of feeThreshold or more. PLACEHOLDER
-    feeThreshold: 3000,
+    feeUnderThreshold: 250,     // establishment fee, loans under feeThreshold. PLACEHOLDER (cap mechanics: open item 3)
+    feeAtOrOverThreshold: 400, // establishment fee, loans of feeThreshold or more. PLACEHOLDER
+    feeThreshold: 3500,
     exampleAmount: 3100,        // worked example (spec s 2)
-    exampleMonths: 12,
+    exampleMonths: 18,
     exampleSmallAmount: 2001,   // second worked example: a small, short loan (offer canvas s 7)
-    exampleSmallMonths: 3
+    exampleSmallMonths: 6
   };
 
   /* ---------- Loan maths. Shared with forms.js (window.RATE_CALC); never hard-code example figures ---------- */
   // Fee is added to the balance (spec s 2). Equal monthly repayments, monthly rate = rateRep / 12.
   function calc(amount, months) {
-    var fee = amount >= CARD.feeThreshold ? CARD.feeOver3000 : CARD.feeUnder3000;
+    var fee = amount >= CARD.feeThreshold ? CARD.feeAtOrOverThreshold : CARD.feeUnderThreshold;
     var balance = amount + fee, i = CARD.rateRep / 100 / 12;
     var monthly = i === 0 ? balance / months : balance * i / (1 - Math.pow(1 + i, -months));
     monthly = Math.round(monthly * 100) / 100;
@@ -99,9 +99,10 @@
     /* ---------- Rate card (display strings built from CARD above) ---------- */
     RATE_MIN: CARD.rateMin + '%',                    // PLACEHOLDER 20%
     RATE_MAX: CARD.rateMax + '%',                    // PLACEHOLDER 48%
-    RATE_REP: CARD.rateRep.toFixed(2) + '%',         // representative rate 48.00% (pricing decision 8 Nov 2026)
-    ESTAB_FEE_UNDER_3000: money(CARD.feeUnder3000),  // PLACEHOLDER
-    ESTAB_FEE_OVER_3000: money(CARD.feeOver3000),    // PLACEHOLDER
+    RATE_REP: CARD.rateRep.toFixed(2) + '%',         // representative rate 48.00% (board decision 9 Nov 2026)
+    ESTAB_FEE_UNDER_THRESHOLD: money(CARD.feeUnderThreshold),   // loans under $3,500. PLACEHOLDER
+    ESTAB_FEE_OVER_THRESHOLD: money(CARD.feeAtOrOverThreshold),  // loans of $3,500 or more
+    FEE_THRESHOLD: money(CARD.feeThreshold),    // PLACEHOLDER
     LATE_FEE: '[$ amount, or None]',                 // PLACEHOLDER: only a fee Mantis will charge (spec s 2)
     DISHONOUR_FEE: '[$ amount, or None]',            // PLACEHOLDER
 
@@ -127,9 +128,8 @@
     EARLY_EXIT_MONTH: String(exitMonth),
     EARLY_EXIT_SAVING: money(Math.round(exitSaving)),   // whole dollars: the page says "about"
 
-    /* ---------- Offer stack (8 Nov 2026, reports/Grand slam offer canvas 1.md) ---------- */
+    /* ---------- Offer stack (8 Nov 2026, revised 9 Nov, reports/Grand slam offer canvas 1.md) ---------- */
     DECISION_PROMISE_MINUTES: '10',                  // PLACEHOLDER: OPS must measure before launch (RG 234 substantiation)
-    FEE_WAIVER_AMOUNT: money(CARD.feeOver3000),      // the establishment fee waived on a missed decision
     CHANGE_OF_MIND_HOURS: '48',                      // counsel: against early-termination terms (offer s 10 item 2)
     FREE_DATE_MOVES: 'one',                          // a year; must be a contract term (offer s 10 item 4)
     GOOD_PAYER_REPAYMENTS: 'six',                    // counsel: inducement to re-borrow (offer s 10 item 3)

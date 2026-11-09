@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
   <title>Rates and fees: see every dollar | Sandcastle</title>
   <meta name="description" content="Full rate card, a worked example and the comparison rate. Rates 20% to 48% p.a. No early-repayment fee.">
   <link rel="canonical" href="https://cktc.github.io/sandcastle-site/rates.html">
@@ -24,6 +25,7 @@
 </head>
 <body data-track-view="rate_card_view">
 <a class="skip-link" href="#main">Skip to main content</a>
+<div class="proto-banner" role="note" data-testid="prototype-banner"><div class="container"><p>Concept prototype. Sandcastle is a working name and does not offer credit. No application is submitted.</p></div></div>
 <header class="site-header">
   <div class="container site-header__inner">
     <a class="wordmark" href="index.html" data-testid="wordmark"><svg class="wordmark__mark" viewBox="0 0 28 28" aria-hidden="true"><path d="M5 20C5 11 10 5 19 5c0 9-5 15-14 15z"/><path d="M11 24c0-7 4-11 12-11 0 7-4 11-12 11z"/></svg><span data-cfg="BRAND_NAME">Sandcastle</span></a>
@@ -50,9 +52,9 @@
     <h2 class="rate-card__title">Personal loan</h2>
     <dl class="ledger" data-testid="rate-card-ledger">
   <div class="ledger__row"><dt>Amount</dt><dd>$2,001 to $5,000</dd></div>
-  <div class="ledger__row"><dt>Term</dt><dd>3 to 12 months</dd></div>
+  <div class="ledger__row"><dt>Term</dt><dd>6 to 18 months</dd></div>
   <div class="ledger__row"><dt>Interest rate</dt><dd><span data-cfg="RATE_MIN">20%</span> to <span data-cfg="RATE_MAX">48%</span> p.a.</dd></div>
-  <div class="ledger__row"><dt>Comparison rate</dt><dd><span data-cfg="COMPARISON_RATE_EXAMPLE">73.87%</span> p.a.*</dd></div>
+  <div class="ledger__row"><dt>Comparison rate</dt><dd><span data-cfg="COMPARISON_RATE_EXAMPLE">59.67%</span> p.a.*</dd></div>
   <div class="ledger__row"><dt>Fees</dt><dd>Stated in dollars below</dd></div>
 </dl>
     <p class="placeholder-note" data-testid="placeholder-note">Illustrative only. Rates and fees are placeholders pending pricing and legal review.</p>
@@ -66,36 +68,36 @@
 <thead><tr><th scope="col">Item</th><th scope="col" class="num">Amount</th></tr></thead>
 <tbody>
 <tr><th scope="row">Amount borrowed</th><td class="num"><span data-cfg="EXAMPLE_AMOUNT">$3,100</span></td></tr>
-<tr><th scope="row">Term</th><td class="num"><span data-cfg="EXAMPLE_TERM">12 months</span></td></tr>
-<tr><th scope="row">Establishment fee</th><td class="num"><span data-cfg="EXAMPLE_FEE">$400</span></td></tr>
-<tr><th scope="row">Interest</th><td class="num"><span data-cfg="EXAMPLE_INTEREST">$975.16</span></td></tr>
+<tr><th scope="row">Term</th><td class="num"><span data-cfg="EXAMPLE_TERM">18 months</span></td></tr>
+<tr><th scope="row">Establishment fee</th><td class="num"><span data-cfg="EXAMPLE_FEE">$250</span></td></tr>
+<tr><th scope="row">Interest</th><td class="num"><span data-cfg="EXAMPLE_INTEREST">$1,413.34</span></td></tr>
 <tr><th scope="row">Monthly account fee</th><td class="num">None</td></tr>
-<tr><th scope="row">Each month you repay</th><td class="num"><span data-cfg="EXAMPLE_MONTHLY">$372.93</span></td></tr>
-<tr><th scope="row">Total cost of credit</th><td class="num"><span data-cfg="EXAMPLE_COST">$1,375.16</span></td></tr>
+<tr><th scope="row">Each month you repay</th><td class="num"><span data-cfg="EXAMPLE_MONTHLY">$264.63</span></td></tr>
+<tr><th scope="row">Total cost of credit</th><td class="num"><span data-cfg="EXAMPLE_COST">$1,663.34</span></td></tr>
 <tr><th scope="row">Interest rate used in this example</th><td class="num"><span data-cfg="RATE_REP">48.00%</span> p.a.</td></tr>
-<tr><th scope="row">Comparison rate</th><td class="num"><span data-cfg="COMPARISON_RATE_EXAMPLE">73.87%</span> p.a.* <span class="placeholder-note" data-testid="placeholder-note">Illustrative only. Rates and fees are placeholders pending pricing and legal review.</span></td></tr>
+<tr><th scope="row">Comparison rate</th><td class="num"><span data-cfg="COMPARISON_RATE_EXAMPLE">59.67%</span> p.a.* <span class="placeholder-note" data-testid="placeholder-note">Illustrative only. Rates and fees are placeholders pending pricing and legal review.</span></td></tr>
 </tbody>
-<tfoot><tr><th scope="row">You repay in total</th><td class="num"><span data-cfg="EXAMPLE_TOTAL">$4,475.16</span></td></tr></tfoot>
+<tfoot><tr><th scope="row">You repay in total</th><td class="num"><span data-cfg="EXAMPLE_TOTAL">$4,763.34</span></td></tr></tfoot>
 </table>
 </div>
     <p class="rate-card__foot" data-testid="comparison-rate-warning">WARNING: This comparison rate is true only for the example given and may not include all fees and charges. Different terms, fees or other loan amounts might result in a different comparison rate.</p>
   </article>
   <article class="rate-card card" data-testid="rate-card-small">
     <h3 class="rate-card__title">A smaller, shorter loan</h3>
-    <p>A flat establishment fee weighs more on a small loan over a short term. The same rate and fee, on <span data-cfg="EXAMPLE_SMALL_AMOUNT">$2,001</span> over <span data-cfg="EXAMPLE_SMALL_TERM">3 months</span>:</p>
-    <!-- [VERIFY: counsel] comparison rates above 48% with a $400 fee, small-short-loan row in particular (offer canvas s 10 item 5). All figures computed in config.js. -->
+    <p>A flat establishment fee weighs more on a small loan over a short term. The same rate and fee, on <span data-cfg="EXAMPLE_SMALL_AMOUNT">$2,001</span> over <span data-cfg="EXAMPLE_SMALL_TERM">6 months</span>:</p>
+    <!-- [VERIFY: counsel] comparison rates above 48% with the establishment fee, small-short-loan row in particular (offer canvas s 10 item 5). All figures computed in config.js. -->
     <dl class="ledger" data-testid="small-example-ledger">
       <div class="ledger__row"><dt>You borrow</dt><dd><span data-cfg="EXAMPLE_SMALL_AMOUNT">$2,001</span></dd></div>
-      <div class="ledger__row"><dt>Over</dt><dd><span data-cfg="EXAMPLE_SMALL_TERM">3 months</span></dd></div>
-      <div class="ledger__row"><dt>Establishment fee</dt><dd><span data-cfg="ESTAB_FEE_UNDER_3000">$400</span></dd></div>
-      <div class="ledger__row"><dt>Each month you repay</dt><dd><span data-cfg="EXAMPLE_SMALL_MONTHLY">$865.20</span></dd></div>
-      <div class="ledger__row"><dt>Total cost of credit</dt><dd><span data-cfg="EXAMPLE_SMALL_COST">$594.60</span></dd></div>
+      <div class="ledger__row"><dt>Over</dt><dd><span data-cfg="EXAMPLE_SMALL_TERM">6 months</span></dd></div>
+      <div class="ledger__row"><dt>Establishment fee</dt><dd><span data-cfg="ESTAB_FEE_UNDER_THRESHOLD">$250</span></dd></div>
+      <div class="ledger__row"><dt>Each month you repay</dt><dd><span data-cfg="EXAMPLE_SMALL_MONTHLY">$429.41</span></dd></div>
+      <div class="ledger__row"><dt>Total cost of credit</dt><dd><span data-cfg="EXAMPLE_SMALL_COST">$575.46</span></dd></div>
       <div class="ledger__row"><dt>Interest rate</dt><dd><span data-cfg="RATE_REP">48.00%</span> p.a.</dd></div>
-      <div class="ledger__row"><dt>Comparison rate</dt><dd><span data-cfg="COMPARISON_RATE_SMALL">170.74%</span> p.a.*</dd></div>
+      <div class="ledger__row"><dt>Comparison rate</dt><dd><span data-cfg="COMPARISON_RATE_SMALL">92.85%</span> p.a.*</dd></div>
     </dl>
     <p class="warn-text" data-testid="comparison-rate-warning">WARNING: This comparison rate is true only for the example given and may not include all fees and charges. Different terms, fees or other loan amounts might result in a different comparison rate.</p>
     <dl class="ledger" data-testid="small-example-total">
-      <div class="ledger__row ledger__row--total"><dt>You repay in total</dt><dd><span data-cfg="EXAMPLE_SMALL_TOTAL">$2,595.60</span></dd></div>
+      <div class="ledger__row ledger__row--total"><dt>You repay in total</dt><dd><span data-cfg="EXAMPLE_SMALL_TOTAL">$2,576.46</span></dd></div>
     </dl>
   </article>
 </div></section>
@@ -105,7 +107,7 @@
   <!-- [PLACEHOLDER] -->
   <h2>Every fee</h2>
   <ul data-testid="fee-list">
-    <li>Establishment fee: <span data-cfg="ESTAB_FEE_UNDER_3000">$400</span> on loans under $3,000. <span data-cfg="ESTAB_FEE_OVER_3000">$400</span> on loans of $3,000 or more. Waived if your decision takes longer than <span data-cfg="DECISION_PROMISE_MINUTES">10</span> minutes in business hours. <!-- [PLACEHOLDER; cap interaction: open item 3, VERIFY: counsel] --></li>
+    <li>Establishment fee: <span data-cfg="ESTAB_FEE_UNDER_THRESHOLD">$250</span> on loans under <span data-cfg="FEE_THRESHOLD">$3,500</span>. <span data-cfg="ESTAB_FEE_OVER_THRESHOLD">$400</span> on loans of <span data-cfg="FEE_THRESHOLD">$3,500</span> or more. Waived if your decision takes longer than <span data-cfg="DECISION_PROMISE_MINUTES">10</span> minutes in business hours. <!-- [PLACEHOLDER; cap interaction: open item 3, VERIFY: counsel] --></li>
     <li>Late fee: <span data-cfg="LATE_FEE">[$ amount, or None]</span>.</li>
     <li>Dishonour fee: <span data-cfg="DISHONOUR_FEE">[$ amount, or None]</span>. <!-- [PLACEHOLDER: dollar figure or "None"] --></li>
     <li>Early repayment: No fee.</li>

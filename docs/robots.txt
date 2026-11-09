@@ -1,5 +1,6 @@
 User-agent: *
-Allow: /
+Disallow: /
 
+# Concept prototype: keep all crawlers out. Restore "Allow: /" only at launch (README, pre-launch blockers).
 # Replace with the live address (same base as the canonical tags) before launch.
 Sitemap: https://cktc.github.io/sandcastle-site/sitemap.xml
